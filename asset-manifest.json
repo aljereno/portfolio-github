@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio-github/static/css/main.5f361e03.chunk.css",
+    "main.js": "/portfolio-github/static/js/main.b4294606.chunk.js",
+    "main.js.map": "/portfolio-github/static/js/main.b4294606.chunk.js.map",
+    "runtime-main.js": "/portfolio-github/static/js/runtime-main.3eec76d8.js",
+    "runtime-main.js.map": "/portfolio-github/static/js/runtime-main.3eec76d8.js.map",
+    "static/js/2.e42edcea.chunk.js": "/portfolio-github/static/js/2.e42edcea.chunk.js",
+    "static/js/2.e42edcea.chunk.js.map": "/portfolio-github/static/js/2.e42edcea.chunk.js.map",
+    "index.html": "/portfolio-github/index.html",
+    "precache-manifest.b98e3e1d8cb2cc96a454b5c1a604ae30.js": "/portfolio-github/precache-manifest.b98e3e1d8cb2cc96a454b5c1a604ae30.js",
+    "service-worker.js": "/portfolio-github/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/portfolio-github/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.e42edcea.chunk.js.LICENSE.txt": "/portfolio-github/static/js/2.e42edcea.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/portfolio-github/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3eec76d8.js",
+    "static/js/2.e42edcea.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.b4294606.chunk.js"
+  ]
+}

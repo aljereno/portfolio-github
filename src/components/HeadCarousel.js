@@ -2,21 +2,20 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import useWindowDimensions from './WindowDimensions'
+import '../styles/globalstyles.css';
 
 const HeadCarousel = () => {
 
     const { height, width } = useWindowDimensions();
 
     return (
-        <Container style={{ backgroundColor: "white" }}>
+        <Container>
           <Carousel>
-            <Carousel.Item>
+            <Carousel.Item className="carouselImages">
               {/* The require keyword is needed*/}
               <img
-                className="d-block"
+                className="d-block carouselImages"
                 src={require("../images/image1.jpg")}
-                width="width"
-                height="600"
                 alt="First slide"
               />
               <Carousel.Caption>
@@ -28,10 +27,8 @@ const HeadCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block"
+                className="d-block carouselImages"
                 src={require("../images/image2.jpg")}
-                width="width"
-                height="600"
                 alt="First slide"
               />
               <Carousel.Caption>
@@ -41,10 +38,8 @@ const HeadCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block carouselImages"
                 src={require("../images/image3.jpg")}
-                width="width"
-                height="600"
                 alt="First slide"
               />
               <Carousel.Caption>

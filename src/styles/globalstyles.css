@@ -1,0 +1,17 @@
+.carouselImages {
+    margin-top: 10;
+    width: 100%;
+    height: auto;
+}
+
+.rightContainer {
+    margin-top: 20px;
+    background-color: coral;
+    height: 75px;
+    margin-bottom: 140px;
+}
+
+.rightContainerText {
+    text-align: center;
+    padding-top: 1.5rem;
+}

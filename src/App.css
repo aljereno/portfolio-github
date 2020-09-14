@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.rightContainer {
+  margin-top: 20px;
+  background-color: coral;
+  height: 50px;
+  margin-bottom: 20px;
+}

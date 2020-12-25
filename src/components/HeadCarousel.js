@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-import useWindowDimensions from './WindowDimensions'
+//import useWindowDimensions from './WindowDimensions'
 import '../styles/globalstyles.css';
 
 const HeadCarousel = () => {
 
-    const { height, width } = useWindowDimensions();
+    //const { height, width } = useWindowDimensions();
 
     return (
         <Container>

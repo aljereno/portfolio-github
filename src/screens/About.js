@@ -1,10 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Carousel from 'react-bootstrap/Carousel';
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+// import Carousel from 'react-bootstrap/Carousel';
 import useWindowDimensions from '../components/WindowDimensions'
-import HeadCarousel from '../components/HeadCarousel';
+//import HeadCarousel from '../components/HeadCarousel';
 //import '../styles/globalstyles.css';
 import '../App.css';
 

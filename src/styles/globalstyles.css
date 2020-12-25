@@ -1,17 +1,37 @@
 .carouselImages {
-    margin-top: 10;
     width: 100%;
     height: auto;
 }
 
 .rightContainer {
-    margin-top: 20px;
     background-color: coral;
-    height: 75px;
-    margin-bottom: 140px;
+    height: 5em;
+    margin-bottom: 6em;
+    border-radius: 25px;
+    color: black;
 }
 
 .rightContainerText {
     text-align: center;
     padding-top: 1.5rem;
+}
+
+.goalContainer {
+    height: 200px;
+    background-color: #756464;
+    border-radius: 10px;
+}
+
+.middleContainer {
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+}
+
+.middleExtra {
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 10em;
+    
 }

@@ -27,14 +27,14 @@ const Homepage = () => {
                             </p>
                         </div>
                     </Link>
-                    <Link to='/completed'>
+                    <Link to='/ongoing'>
                         <div className="rightContainer" >
                             <p style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Ongoing
                             </p>
                         </div>
                     </Link>
-                    <Link to='/completed' style={{textDecoration:'none'}}>
+                    <Link to='/about' style={{textDecoration:'none'}}>
                         <div className="rightContainer" >
                             <p style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Entertainment

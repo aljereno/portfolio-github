@@ -3,6 +3,7 @@ import '../styles/globalstyles.css';
 // import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import useWindowDimensions from '../components/WindowDimensions'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -13,7 +14,9 @@ const NavBar = () => {
         //     <Navbar.Brand href="#home">Brand link</Navbar.Brand>
         // </Navbar>
         <Navbar expand="lg" style={{backgroundColor: '#2E2222'}}>
-            <Navbar.Brand href="#">Navbar</Navbar.Brand>
+            <Link to='/'>
+                <Navbar.Brand href="#">Navbar</Navbar.Brand>
+            </Link>
         </Navbar>
         
     )

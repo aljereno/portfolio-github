@@ -11,8 +11,10 @@ const Completed = () => {
             <div style={{backgroundColor: 'Coral'}}>
                 <Container>
                     <p style={{textAlign: "center"}}>Completed</p>
+                    <p>
+                        Weatherbox (Guava Project)
+                    </p>
                 </Container>
-
             </div>
         </div>
     )

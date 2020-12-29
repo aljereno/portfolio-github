@@ -15,7 +15,7 @@ const NavBar = () => {
         // </Navbar>
         <Navbar expand="lg" style={{backgroundColor: '#2E2222'}}>
             <Link to='/'>
-                <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                <Navbar.Brand>Navbar</Navbar.Brand>
             </Link>
         </Navbar>
         

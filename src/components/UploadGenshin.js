@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/globalstyles.css';
+import Progress from '../components/Progress';
 
 const UploadGenshin = () => {
     const [file, setFile] = useState(null);
@@ -23,12 +24,11 @@ const UploadGenshin = () => {
         <form>
             <label>
                 <input type="file" onChange={changeHandler}/>
-                <span>+</span>
             </label>
             <div className="output">
                 { error && <div className="error">{ error } </div>}
                 { file && <div> {file.name} </div>}
-                {/* { file && <ProgressBar file={file} setFile={setFile}/>} */}
+                { file && <Progress file={file} setFile={setFile}/>}
             </div>
         </form>
     )

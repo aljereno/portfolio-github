@@ -25,7 +25,7 @@ const HeadCarousel = () => {
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
+            {/* <Carousel.Item>
               <img
                 className="d-block carouselImages"
                 src={require("../images/image2.jpg")}
@@ -49,7 +49,7 @@ const HeadCarousel = () => {
                   consectetur.
                 </p>
               </Carousel.Caption>
-            </Carousel.Item>
+            </Carousel.Item> */}
           </Carousel>
         </Container>
     );

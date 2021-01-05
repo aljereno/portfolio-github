@@ -6,12 +6,15 @@ import Container from 'react-bootstrap/Container';
 import useWindowDimensions from '../components/WindowDimensions'
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
+import useFirestore from '../hooks/useFirestore';
 //import '../App.css';
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {
 
     const { height } = useWindowDimensions();
+    const { docs } = useFirestore('project-stories');
+    console.log(docs);
 
     return (
         <div style={{backgroundColor: '#C4C4C4', height: height}}>
@@ -60,7 +63,11 @@ const Homepage = () => {
                 <Container>
                     <p>January Major Goals</p>
                     <div className="goalContainer">
-                        List format for january goals
+                        {docs && docs.map(doc => (
+                            <p key={doc.id}>
+                                {doc.title}
+                            </p>
+                        ))}
                     </div>
                 </Container>
                 <Container>

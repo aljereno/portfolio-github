@@ -3,10 +3,13 @@ import Container from 'react-bootstrap/Container';
 import useWindowDimensions from '../components/WindowDimensions'
 import '../styles/globalstyles.css';
 import { Link } from 'react-router-dom';
+import useFirestore from '../hooks/useFirestore';
 
 const Ongoing = () => {
 
     const { height, width } = useWindowDimensions();
+    const { docs } = useFirestore('project-stories');
+    console.log(docs);
 
     return (
         <div style={{backgroundColor: '#C4C4C4', width: width, height: height}}>
@@ -24,6 +27,11 @@ const Ongoing = () => {
                     <p>
                         Running Clicker Game Project
                     </p>
+                    { docs && docs.map(doc => (
+                        <p key={doc.id}>
+                            {doc.title}
+                        </p>
+                    ))}
                 </Container>
 
             </div>

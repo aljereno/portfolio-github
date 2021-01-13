@@ -13,10 +13,13 @@ const NavBar = () => {
         // <Navbar style={{backgroundColor: '#2E2222', width: width, flex: 1}}>
         //     <Navbar.Brand href="#home">Brand link</Navbar.Brand>
         // </Navbar>
-        <Navbar expand="lg" style={{backgroundColor: '#2E2222'}}>
+        <Navbar expand="lg" style={{backgroundColor: '#cc7a00'}}>
             <Link to='/'>
-                <Navbar.Brand>Navbar</Navbar.Brand>
+                <Navbar.Brand stlye={{color: 'white'}}>Navbar</Navbar.Brand>
             </Link>
+            {/* <Link to='/'>
+                <p stlye={{color: '#0060B6', textDecoration: "none"}}>Navbar</p>
+            </Link> */}
         </Navbar>
         
     )

@@ -3,18 +3,16 @@ import Container from 'react-bootstrap/Container';
 // import Col from 'react-bootstrap/Col';
 // import Row from 'react-bootstrap/Row';
 // import Carousel from 'react-bootstrap/Carousel';
+import MiddleHomepage from '../components/MiddleHomepage';
 import useWindowDimensions from '../components/WindowDimensions'
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
-import useFirestore from '../hooks/useFirestore';
+
 //import '../App.css';
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {
-
-    const { docs } = useFirestore('project-stories');
-
-    return (
+    return (    
         <div style={{backgroundColor: '#C4C4C4'}}>
             <div style={{display: "flex"}}>
                 <Container style={{marginTop: "20px", marginBottom: "20px", borderRadius: "25px"}}>
@@ -44,30 +42,8 @@ const Homepage = () => {
                     </Link>
                 </Container>
             </div>
-            <div style={{display: "flex"}}>
-                    <Container className="middleContainer">
-                        <p>Nonsense goals, projects, buys</p>
-                    </Container>
-            </div>
-            <div style={{display: "flex", textAlign: "center"}}>
-                <Container>
-                    <p>January</p>
-                    <div className="goalContainer">
-                        {docs && docs.map(doc => (
-                            <p key={doc.id}>
-                                {doc.title}
-                            </p>    
-                        ))}
-                    </div>
-                </Container>
-                <Container>
-                    <p>February</p>
-                    <div className="goalContainer">
-                        List format for february goals
-                    </div>
-                </Container>
-            </div>
             
+            <MiddleHomepage/>
             <div className="middleContainer" style={{fontSize: "10px", marginTop: "3rem", lineHeight: "1rem", paddingBottom: "1rem"}}>
             <Container className="middleContainer middleExtra"><p>Archive</p></Container>
                 <p>Aljaed Lui Ereno</p>

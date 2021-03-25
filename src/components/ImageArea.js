@@ -3,6 +3,7 @@ import useFirestore from '../hooks/useFirestore';
 
 const ImageArea = ({ setSelectedImg }) => {
 
+    //const { docs } = useFirestore('genshin-abyss-second');
     const { docs } = useFirestore('images');
     console.log(docs);
 

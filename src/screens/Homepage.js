@@ -7,9 +7,10 @@ import MiddleHomepage from '../components/MiddleHomepage';
 import useWindowDimensions from '../components/WindowDimensions'
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
-
 //import '../App.css';
 import { Link } from 'react-router-dom';
+import Card from '../minis/Card';
+import FireEmblemDataEntry from '../components/FireEmblemDataEntry';
 
 const Homepage = () => {
     return (    
@@ -40,6 +41,7 @@ const Homepage = () => {
                             </p>
                         </div>
                     </Link>
+
                 </Container>
             </div>
             
@@ -49,6 +51,9 @@ const Homepage = () => {
                 <p>Aljaed Lui Ereno</p>
                 <p>There isn't much to this world, so make the most of it.</p>
             </div>
+
+            {/* <Card/> */}
+            <FireEmblemDataEntry/>
         </div>
     )
 }

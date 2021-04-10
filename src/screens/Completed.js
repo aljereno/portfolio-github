@@ -1,7 +1,7 @@
 import React  from 'react';
 import Container from 'react-bootstrap/Container';
 import useWindowDimensions from '../components/WindowDimensions'
-import useFirestore from '../hooks/useFirestore';
+//import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
 import { Link } from 'react-router-dom';
 

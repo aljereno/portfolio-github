@@ -1,16 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-// import Col from 'react-bootstrap/Col';
-// import Row from 'react-bootstrap/Row';
-// import Carousel from 'react-bootstrap/Carousel';
 import MiddleHomepage from '../components/MiddleHomepage';
-import useWindowDimensions from '../components/WindowDimensions'
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
-//import '../App.css';
 import { Link } from 'react-router-dom';
 import Card from '../minis/Card';
-import FireEmblemDataEntry from '../components/FireEmblemDataEntry';
 
 const Homepage = () => {
     return (    
@@ -22,26 +16,25 @@ const Homepage = () => {
                 <Container>
                     <Link to='/completed'>
                         <div className="rightContainer" >
-                            <p style={{textAlign: 'center', paddingTop: '1.5rem'}}>
+                            <h3 style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Completed
-                            </p>
+                            </h3>
                         </div>
                     </Link>
                     <Link to='/ongoing'>
                         <div className="rightContainer" >
-                            <p style={{textAlign: 'center', paddingTop: '1.5rem'}}>
+                            <h3 style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Ongoing
-                            </p>
+                            </h3>
                         </div>
                     </Link>
                     <Link to='/about' style={{textDecoration:'none'}}>
                         <div className="rightContainer" >
-                            <p style={{textAlign: 'center', paddingTop: '1.5rem'}}>
+                            <h3 style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Entertainment
-                            </p>
+                            </h3>
                         </div>
                     </Link>
-
                 </Container>
             </div>
             
@@ -52,8 +45,7 @@ const Homepage = () => {
                 <p>There isn't much to this world, so make the most of it.</p>
             </div>
 
-            {/* <Card/> */}
-            <FireEmblemDataEntry/>
+            <Card imageName={'carousel-images'}/>
         </div>
     )
 }

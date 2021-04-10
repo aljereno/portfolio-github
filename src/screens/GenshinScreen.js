@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Container from 'react-bootstrap/Container';
 import ImageArea from '../components/ImageArea';
 import UploadGenshin from '../components/UploadGenshin';
 import GenshinModal from '../components/GenshinModal';

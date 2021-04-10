@@ -13,7 +13,7 @@ const ImageArea = ({ setSelectedImg }) => {
                 <div className="img-wrap" key={doc.id}
                     onClick={() => setSelectedImg(doc.url)}
                 > 
-                    <img src={doc.url} alt="uploaded pic"/>
+                    {doc.url && <img src={doc.url} alt="uploaded pic"/>}
                 </div>
             ))}
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef }from 'react';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import useFirestore from '../hooks/useFirestore';
@@ -6,14 +6,14 @@ import '../styles/globalstyles.css';
 
 const HeadCarousel = () => {
 
-    //const { height, width } = useWindowDimensions();
     const { docs } = useFirestore('carousel-images');
+    const wrapper = createRef();
 
     return (
         <Container>
           <Carousel>
             {docs && docs.map(doc => (
-              <Carousel.Item className="carouselImages">
+              <Carousel.Item ref={wrapper} key={doc.placement} className="carouselImages">
               {/* The require keyword is needed*/}
               <img
                 className="d-block carouselImages"

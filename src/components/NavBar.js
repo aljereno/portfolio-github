@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-    const { width } = useWindowDimensions();
-    console.log(width);
     return (
         // <Navbar style={{backgroundColor: '#2E2222', width: width, flex: 1}}>
         //     <Navbar.Brand href="#home">Brand link</Navbar.Brand>

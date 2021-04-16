@@ -6,13 +6,12 @@ import About from "./screens/About";
 import NavBar from "./components/NavBar";
 import Completed from "./screens/Completed";
 import Ongoing from "./screens/Ongoing";
-import ProjectInfo from "./singlescreens  /ProjectInfo";
+import ProjectInfo from "./singlescreens/ProjectInfo";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GenshinScreen from './screens/GenshinScreen';
 import Quarantine from './singlescreens/Quarantine';
 import Entertainment from './screens/Entertainment';
 import Weatherbox from './singlescreens/Weatherbox';
-
 function App() {
   return (
     <BrowserRouter>

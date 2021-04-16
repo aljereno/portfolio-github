@@ -1,42 +1,15 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import useWindowDimensions from '../components/WindowDimensions'
 import '../styles/globalstyles.css';
-import { Link } from 'react-router-dom';
-import useFirestore from '../hooks/useFirestore';
+import Card from '../minis/Card';
 
 const Ongoing = () => {
-
-    const { height, width } = useWindowDimensions();
-    const { docs } = useFirestore('project-stories');
-    console.log(docs);
-
     return (
-        <div style={{backgroundColor: '#C4C4C4', width: width, height: height}}>
+        <div style={{backgroundColor: '#C4C4C4'}}>
             <div style={{backgroundColor: 'Coral'}}>
-                <Container>
-                    <p style={{textAlign: "center"}}>Ongoing</p>
-                    <Link to='/genshinScreen'>
-                        <p>
-                            Genshin Screen
-                        </p>
-                    </Link>
-                    <p>
-                        Fire Emblem Project
-                    </p>
-                    <p>
-                        Running Clicker Game Project
-                    </p>
-                    { docs && docs.map(doc => (
-                        <p key={doc.id}>
-                            {doc.title}
-                        </p>
-                    ))}
-                </Container>
-
+                <Card imageName={'ongoing-stories'}/>  
             </div>
         </div>
     )
 }
 
-export default Ongoing;
+export default Ongoing; 

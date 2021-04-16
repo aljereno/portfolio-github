@@ -8,16 +8,19 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
 
     return (
-        // <Navbar style={{backgroundColor: '#2E2222', width: width, flex: 1}}>
-        //     <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-        // </Navbar>
         <Navbar expand="lg" style={{backgroundColor: '#cc7a00'}}>
             <Link to='/'>
-                <Navbar.Brand stlye={{color: 'white'}}>Navbar</Navbar.Brand>
+                <Navbar.Brand stlye={{color: 'white'}}>Home</Navbar.Brand>
             </Link>
-            {/* <Link to='/'>
-                <p stlye={{color: '#0060B6', textDecoration: "none"}}>Navbar</p>
-            </Link> */}
+            <Link to='completed'>
+                <Navbar.Brand stlye={{color: 'white'}}>Completed</Navbar.Brand>
+            </Link>
+            <Link to='/ongoing'>
+                <Navbar.Brand stlye={{color: 'white'}}>Ongoing</Navbar.Brand>
+            </Link> 
+            <Link to='/entertainment'>
+                <Navbar.Brand stlye={{color: 'white'}}>Home</Navbar.Brand>
+            </Link>
         </Navbar>
         
     )

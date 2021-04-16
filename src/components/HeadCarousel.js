@@ -17,6 +17,7 @@ const HeadCarousel = () => {
               {/* The require keyword is needed*/}
               <img
                 className="d-block carouselImages"
+                style={{height: '500px', width: '10 00px'}}
                 src={(doc.url)}
                 alt="First slide"
               />

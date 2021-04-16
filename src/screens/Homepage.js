@@ -4,7 +4,6 @@ import MiddleHomepage from '../components/MiddleHomepage';
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
 import { Link } from 'react-router-dom';
-import Card from '../minis/Card';
 
 const Homepage = () => {
     return (    
@@ -28,11 +27,11 @@ const Homepage = () => {
                             </h3>
                         </div>
                     </Link>
-                    <Link to='/about' style={{textDecoration:'none'}}>
+                    <Link to='/entertainment' style={{textDecoration:'none'}}>
                         <div className="rightContainer" >
                             <h3 style={{textAlign: 'center', paddingTop: '1.5rem'}}>
                                 Entertainment
-                            </h3>
+                            </h3>   
                         </div>
                     </Link>
                 </Container>
@@ -44,8 +43,6 @@ const Homepage = () => {
                 <p>Aljaed Lui Ereno</p>
                 <p>There isn't much to this world, so make the most of it.</p>
             </div>
-
-            <Card imageName={'carousel-images'}/>
         </div>
     )
 }

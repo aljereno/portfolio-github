@@ -12,6 +12,8 @@ import GenshinScreen from './screens/GenshinScreen';
 import Quarantine from './singlescreens/Quarantine';
 import Entertainment from './screens/Entertainment';
 import Weatherbox from './singlescreens/Weatherbox';
+import TestingScreen from './screens/TestingScreen';
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +29,7 @@ function App() {
         <Route path='/quarantine' exact component={Quarantine}/>
         <Route path='/weatherbox' exact component={Weatherbox}/>
         <Route path='/projectInfo' exact component={ProjectInfo}/>
+        <Route path='/testing' exact component={TestingScreen}/>
         <Route path='/' render={() => <div>404</div>}/>
       </Switch>
     </BrowserRouter>

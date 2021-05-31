@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/globalstyles.css';
 // import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import useWindowDimensions from '../components/WindowDimensions'
+// import useWindowDimensions from '../components/WindowDimensions'
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {

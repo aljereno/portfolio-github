@@ -4,10 +4,8 @@ import Card from '../minis/Card';
 
 export default function Entertainment() {
     return (
-        <div style={{backgroundColor: 'coral', width: '100%', height: '100%'}}>
-            <Container>
-                <Card imageName="entertainment-stories"/>
-            </Container>
-        </div>
+        <Container style={{backgroundColor: '#2e4a1e', borderRadius: "25px"}}>
+            <Card imageName="entertainment-stories"/>
+        </Container>
     )
 }

@@ -19,7 +19,7 @@ const NavBar = () => {
                 <Navbar.Brand stlye={{color: 'white'}}>Ongoing</Navbar.Brand>
             </Link> 
             <Link to='/entertainment'>
-                <Navbar.Brand stlye={{color: 'white'}}>Home</Navbar.Brand>
+                <Navbar.Brand stlye={{color: 'white'}}>Entertainment</Navbar.Brand>
             </Link>
         </Navbar>
         

@@ -22,10 +22,10 @@ const UploadGenshin = () => {
 
     return (
         <form>
-            <label>
+            {/* <label>
                 <input type="file" onChange={changeHandler}/>
                 <span>+</span>
-            </label>
+            </label> */}
             <p>Showcasing the stats, weapons and units that help me beat Floor 12.</p>
             <div className="output">
                 { error && <div className="error">{ error } </div>}

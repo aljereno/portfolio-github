@@ -11,6 +11,7 @@ const ProjectInfo = () => {
                 <li>Firebase Firestore</li>
                 <li>React router</li>
                 <li>React bootstrap</li>
+                <li>Firebase Authentication</li>
             </ul>
             <h3>Objective</h3>
             <p> To create a website/blog page featuring my previous school projects and side projects. Also this is a way to fully learn
@@ -53,6 +54,10 @@ const ProjectInfo = () => {
                     <li>Components, update navbar to change based on what page you are on</li>
                     <li>Completed, finish up the pictures for Quarantine</li>
                     <li>Completed, finish up pictures for Weatherbox</li>
+                    <li>Created on June 12, 2021</li>
+                    <li>Need to setup an authenticator</li>
+                    <li>Use authenticator to create login page</li>
+                    <li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li>
                 </ul>
             </section>
             <h3>Progress</h3>

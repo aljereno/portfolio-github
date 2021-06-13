@@ -5,7 +5,7 @@ const ImageArea = ({ setSelectedImg }) => {
 
     //const { docs } = useFirestore('genshin-abyss-second');
     const { docs } = useFirestore('images');
-    console.log(docs);
+    // console.log(docs);
 
     return (
         <div className="img-grid">

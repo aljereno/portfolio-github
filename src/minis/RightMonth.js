@@ -9,7 +9,7 @@ const RightMonth = () => {
 
     return (
             <Container> 
-                <p>February</p>
+                <p>Next Month</p>
                 <div className="goalContainer">
                     {docs && docs.map(doc => (
                         doc.placement <= 8 ? 

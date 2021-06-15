@@ -13,11 +13,11 @@ const HeadCarousel = () => {
         <Container>
           <Carousel>
             {docs && docs.map(doc => (
-              <Carousel.Item ref={wrapper} key={doc.placement} className="carouselImages">
+              <Carousel.Item ref={wrapper} key={doc.placement}>
               {/* The require keyword is needed*/}
               <img
                 className="d-block carouselImages"
-                style={{height: '500px', width: '10 00px'}}
+                style={{height: '430px', width: 'auto'}}
                 src={(doc.url)}
                 alt="First slide"
               />

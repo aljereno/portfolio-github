@@ -10,10 +10,10 @@ const Homepage = () => {
     return (    
         <div style={{backgroundColor: '#C4C4C4'}}>
             <div style={{display: "flex"}}>
-                <Container style={{marginTop: "20px", marginBottom: "20px", borderRadius: "25px"}}>
+                <Container style={{marginTop: "20px", marginBottom: "20px", borderRadius: "25px", flex: "0 0 70%"}}>
                     <HeadCarousel/>
                 </Container>
-                <Container>
+                <Container style={{flex: "0 0 30%"}}>
                     <Link to='/completed'>
                         <div className="rightContainer" >
                             <h3 style={{textAlign: 'center', paddingTop: '1.5rem'}}>

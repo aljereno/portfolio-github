@@ -59,6 +59,8 @@ const ProjectInfo = () => {
                     <li>Need to setup an authenticator</li>
                     <li>Use authenticator to create login page</li>
                     <li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li>
+                    <li>Create mockups/3d object generation of game boxes using Three.js</li>
+                    <li>Ongoing and Completed, will have a different design for its cards, where it will utilize three.js</li>
                 </ul>
                 <p>Completed</p>
                 <ul>
@@ -83,6 +85,7 @@ const ProjectInfo = () => {
                     <p style={{textAlign : 'center'}}>Needed to determine how I would prototype the dashboard, settled on using a site called Figma</p>
                 </div>
             </section>
+            <h3>Gallery Images of the things I created in this project using Figma: </h3>
         </Container>
     )
 }

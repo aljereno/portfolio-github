@@ -12,6 +12,7 @@ const ProjectInfo = () => {
                 <li>React router</li>
                 <li>React bootstrap</li>
                 <li>Firebase Authentication</li>
+                <li>Firebase Hosting</li>
             </ul>
             <h3>Objective</h3>
             <p> To create a website/blog page featuring my previous school projects and side projects. Also this is a way to fully learn
@@ -50,14 +51,22 @@ const ProjectInfo = () => {
                     <li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li>
                     <li>Ongoing, further elaborate on Project Emblem</li>
                     <li>Ongoing, further elaborate on Flat Foot</li>
-                    <li>Components, update the card that will be used to display small info about everything</li>
-                    <li>Components, update navbar to change based on what page you are on</li>
+                    <li>Components 1, update the card that will be used to display small info about everything</li>
+                    <li>Components 2, update navbar to change based on what page you are on</li>
                     <li>Completed, finish up the pictures for Quarantine</li>
                     <li>Completed, finish up pictures for Weatherbox</li>
                     <li>Created on June 12, 2021</li>
                     <li>Need to setup an authenticator</li>
                     <li>Use authenticator to create login page</li>
                     <li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li>
+                </ul>
+                <p>Completed</p>
+                <ul>
+                    <li>June 13, 2021</li>
+                    <li>Components 1 finished, allowed for redirect to specific single screen pages</li>
+                    <li>Deployed the website using firebase hosting</li>
+                    <li>June 14, 2021</li>
+                    <li>Added in the different pages containing all my past projects</li>
                 </ul>
             </section>
             <h3>Progress</h3>

@@ -13,7 +13,9 @@ import Quarantine from './singlescreens/Quarantine';
 import Entertainment from './screens/Entertainment';
 import Weatherbox from './singlescreens/Weatherbox';
 import TestingScreen from './screens/TestingScreen';
-
+import LegLite from './singlescreens/LegLite';
+import BeyondLibrary from './singlescreens/BeyondLibrary';
+import ImgProcessing from './singlescreens/ImgProcessing';
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +32,9 @@ function App() {
         <Route path='/weatherbox' exact component={Weatherbox}/>
         <Route path='/projectInfo' exact component={ProjectInfo}/>
         <Route path='/testing' exact component={TestingScreen}/>
+        <Route path='/leglite' exact component={LegLite}/>
+        <Route path='/beyond' exact component={BeyondLibrary}/>
+        <Route path='/imgProcessing' exact component={ImgProcessing}/>
         <Route path='/' render={() => <div>404</div>}/>
       </Switch>
     </BrowserRouter>

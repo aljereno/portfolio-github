@@ -7,8 +7,6 @@ import '../styles/globalstyles.css';
 
 const MiddleHomepage = () => {
 
-    const { docs } = useFirestore('january-project-stories');
-    //const { docs2 } = useFirestore('february-project-stories');
     return (
         <div>
             <div style={{display: "flex"}}>

@@ -5,14 +5,6 @@ import useFirestore from '../hooks/useFirestore';
 import { Link } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
 
-// const Completed = () => {
-//     return (
-//         <Container style={{backgroundColor: '#2e4a1e', borderRadius: "25px"}}>
-//             <Card imageName="completed-stories"/>
-//         </Container>
-//     )
-// }
-
 const Completed = () => {
     const { docs } = useFirestore('completed-stories');
     let wrapper = createRef();

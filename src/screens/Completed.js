@@ -27,9 +27,15 @@ const Completed = () => {
                             <img style={{maxHeight: '100%', maxWidth: '100%', borderRadius: '25px'}} src={(doc.url)} alt={doc.title}/>
                         </div>  }
                         <div style={{textAlign: "left", width: "100%", marginTop: "1rem", color: "white"}}>
+                            
+                            <div style={{display: "flex"}}>
                             <Link to={doc.link} style={{textDecoration: "none"}}>
                                 <p style={{marginLeft: "20px"}}>{doc.title}</p>
                             </Link>
+                            {doc.badges && doc.badges.map(attr => (
+                                <p><Badge style={{marginLeft: "20px"}} variant="secondary">{attr}</Badge></p>
+                            ))}
+                            </div>
                             <p style={{marginLeft: "20px"}}>{doc.caption}</p>
                         </div>
                     </div>

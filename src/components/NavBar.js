@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
 
     return (
-        <Navbar expand="lg" style={{backgroundColor: '#cc7a00'}}>
+        <Navbar expand="lg" style={{backgroundColor: '#E5AA70'}}>
             <Link to='/'>
                 <Navbar.Brand stlye={{color: 'white'}}>Home</Navbar.Brand>
             </Link>

@@ -164,7 +164,7 @@ label:hover{
 /* CSS styles for hovering over the card that could redirect folks to a project */
 
 .cardAttributes {
-  background-color: gray;
+  background-color: #E5AA70;
   width: 100%;
   margin-top: 1em;
   margin-bottom: 5px;

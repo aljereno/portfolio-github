@@ -20,9 +20,11 @@ const Completed = () => {
                                 <Link to={doc.link} style={{textDecoration: "none", paddingLeft: "20px"}}>
                                     <Button variant="info"><h5 style={{width:"100%"}}>{doc.title}</h5></Button>
                                 </Link>
-                                {doc.badges && doc.badges.map(attr => (
-                                    <h6><Badge style={{marginLeft: "20px", marginTop: "10px"}} variant="secondary">{attr}</Badge></h6>
-                                ))}
+                                <div style={{ display: "flex", flexWrap: "wrap"}}>
+                                    {doc.badges && doc.badges.map(attr => (
+                                        <h6 ><Badge style={{marginLeft: "20px", marginTop: "10px"}} variant="secondary">{attr}</Badge></h6>
+                                    ))}
+                                </div>
                             </div>
                             <div style={{display: "flex"}}>
                                 {doc.url && <div style={{height: '100%', width: '100%', marginLeft: "1rem"}}>

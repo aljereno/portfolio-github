@@ -61,6 +61,8 @@ const ProjectInfo = () => {
                     <li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li>
                     <li>Create mockups/3d object generation of game boxes using Three.js</li>
                     <li>Ongoing and Completed, will have a different design for its cards, where it will utilize three.js</li>
+                    <li>June 17, 2021</li>
+                    <li>Responsive web design</li>
                 </ul>
                 <p>Completed</p>
                 <ul>
@@ -69,12 +71,19 @@ const ProjectInfo = () => {
                     <li>Deployed the website using firebase hosting</li>
                     <li>June 14, 2021</li>
                     <li>Added in the different pages containing all my past projects</li>
+                    <li>June 17, 2021</li>
+                    <li>Finished adding in blurbs, images to the cards in completed tab</li>
+                    <li>Major overhaul of the webpage</li>
                 </ul>
             </section>
             <h3>Progress</h3>
             <p>Since I started the write-up late, my early problems have since disappeared from my noggin and will just update as I see fit.
                 It's not like this page is gonna get much traction anyways. 
             </p>
+            <p>Common screen sizes: 1366*768 = 22.6%</p>
+            <p>1920*1080 = 20.87%</p>
+            <p>375 * 812: iphone xs</p>
+            <p></p>
             <section>
                 
                 <div style={{alignContent: 'center'}}>

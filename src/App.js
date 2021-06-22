@@ -16,6 +16,9 @@ import TestingScreen from './screens/TestingScreen';
 import LegLite from './singlescreens/LegLite';
 import BeyondLibrary from './singlescreens/BeyondLibrary';
 import ImgProcessing from './singlescreens/ImgProcessing';
+import FireChart from './singlescreens/FireChart';
+import FlatFoot from './singlescreens/FlatFoot';
+
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +38,8 @@ function App() {
         <Route path='/leglite' exact component={LegLite}/>
         <Route path='/beyond' exact component={BeyondLibrary}/>
         <Route path='/imgProcessing' exact component={ImgProcessing}/>
+        <Route path='/fireChart' exact component={FireChart}/>
+        <Route path='/flatFoot' exact component={FlatFoot}/>
         <Route path='/' render={() => <div>404</div>}/>
       </Switch>
     </BrowserRouter>

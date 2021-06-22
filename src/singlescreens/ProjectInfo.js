@@ -49,10 +49,10 @@ const ProjectInfo = () => {
                     <li>Genshin Abyss, Progress update on characters throughout the patches (Current Patch 1.4)</li>
                     <li>Entertainment, have a drag and droppable component</li>
                     <li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li>
-                    <li>Ongoing, further elaborate on Project Emblem</li>
-                    <li>Ongoing, further elaborate on Flat Foot</li>
-                    <li>Components 1, update the card that will be used to display small info about everything</li>
-                    <li>Components 2, update navbar to change based on what page you are on</li>
+                    <strike><li>Ongoing, further elaborate on Project Emblem</li></strike>
+                    <strike><li>Ongoing, further elaborate on Flat Foot</li></strike>
+                    <strike><li>Components 1, update the card that will be used to display small info about everything</li></strike>
+                    <strike><li>Components 2, update navbar to change based on what page you are on</li></strike>
                     <li>Completed, finish up the pictures for Quarantine</li>
                     <li>Completed, finish up pictures for Weatherbox</li>
                     <li>Created on June 12, 2021</li>
@@ -74,6 +74,8 @@ const ProjectInfo = () => {
                     <li>June 17, 2021</li>
                     <li>Finished adding in blurbs, images to the cards in completed tab</li>
                     <li>Major overhaul of the webpage</li>
+                    <li>June 21, 2021</li>
+                    <li>Finished Elaboration on Flat foot and fire emblem related projects</li>
                 </ul>
             </section>
             <h3>Progress</h3>

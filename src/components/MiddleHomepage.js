@@ -1,6 +1,5 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import useFirestore from '../hooks/useFirestore';
 import LeftMonth from '../minis/LeftMonth';
 import RightMonth from '../minis/RightMonth';
 import '../styles/globalstyles.css';

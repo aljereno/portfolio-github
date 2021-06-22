@@ -13,37 +13,34 @@ const Drag = () => {
         {id: "4", taskName:"Play baseball", type:"Done", backgroundColor:"green"}
     ])
 
-    useEffect(() => {
-        
-  
-          this.state.tasks.forEach ((task) => {
-            tasks[task.type].push(
-              <div key={task.id} 
-                onDragStart = {(event) => this.onDragStart(event, task.taskName)}
-                draggable
-                className="draggable"
-                style = {{backgroundColor: task.bgcolor}}>
-                {task.taskName}
-              </div>
-            );
-          });
-    }, [])
+    task.forEach ((task) => {
+        tasks[task.type].push(
+          <div key={task.id} 
+            onDragStart = {(event) => onDragStart(event, task.taskName)}
+            draggable
+            className="draggable"
+            style = {{backgroundColor: task.bgcolor}}>
+            {task.taskName}
+          </div>
+        );
+      });
+
 
     //On the start of clicking an object, console will log which event was picked up
-    onDragStart = (event, taskName) => {
+    const onDragStart = (event, taskName) => {
     	console.log('dragstart on div: ', taskName);
     	event.dataTransfer.setData("taskName", taskName);
 	}
 
     //Default behavior would be to snap the event back to its original spot
-	onDragOver = (event) => {
+	const onDragOver = (event) => {
 	    event.preventDefault();
 	}
 
-	onDrop = (event, cat) => {
+	const onDrop = (event, cat) => {
 	    let taskName = event.dataTransfer.getData("taskName");
 
-	    let tasks = this.state.tasks.filter((task) => {
+	    let taskss = tasks.filter((task) => {
 	        if (task.taskName === taskName) {
 	            task.type = cat;
 	        }
@@ -52,7 +49,7 @@ const Drag = () => {
 
 	    this.setState({
 	        ...this.state,
-	        tasks
+	        taskss
 	    });
 	}
 

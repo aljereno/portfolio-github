@@ -1,25 +1,24 @@
 import React from 'react';
 import '../styles/globalstyles.css';
-// import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-// import useWindowDimensions from '../components/WindowDimensions'
+import Badge from 'react-bootstrap/Badge';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
     return (
-        <Navbar expand="lg" style={{backgroundColor: '#E5AA70'}}>
+        <Navbar expand="lg" sticky="top" style={{backgroundColor: '#E5AA70', display: 'flex'}}>
             <Link to='/'>
-                <Navbar.Brand stlye={{color: 'white'}}>Home</Navbar.Brand>
+                <h4 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Home</Badge></h4>
             </Link>
             <Link to='completed'>
-                <Navbar.Brand stlye={{color: 'white'}}>Completed</Navbar.Brand>
+                <h4 className="navLinks" style={{paddingLeft: "5px"}}><Badge variant='secondary'>Completed</Badge></h4>
             </Link>
             <Link to='/ongoing'>
-                <Navbar.Brand stlye={{color: 'white'}}>Ongoing</Navbar.Brand>
+                <h4 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Ongoing</Badge></h4>
             </Link> 
             <Link to='/entertainment'>
-                <Navbar.Brand stlye={{color: 'white'}}>Entertainment</Navbar.Brand>
+                <h4 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Entertainment</Badge></h4>
             </Link>
         </Navbar>
         

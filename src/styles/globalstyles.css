@@ -184,3 +184,7 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.navLinks:hover {
+  opacity: 0.5;
+}

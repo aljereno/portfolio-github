@@ -12,7 +12,7 @@ import GenshinScreen from './screens/GenshinScreen';
 import Quarantine from './singlescreens/Quarantine';
 import Entertainment from './screens/Entertainment';
 import Weatherbox from './singlescreens/Weatherbox';
-import TestingScreen from './screens/TestingScreen';
+// import TestingScreen from './screens/TestingScreen';
 import LegLite from './singlescreens/LegLite';
 import BeyondLibrary from './singlescreens/BeyondLibrary';
 import ImgProcessing from './singlescreens/ImgProcessing';
@@ -34,7 +34,7 @@ function App() {
         <Route path='/quarantine' exact component={Quarantine}/>
         <Route path='/weatherbox' exact component={Weatherbox}/>
         <Route path='/projectInfo' exact component={ProjectInfo}/>
-        <Route path='/testing' exact component={TestingScreen}/>
+        {/* <Route path='/testing' exact component={TestingScreen}/> */}
         <Route path='/leglite' exact component={LegLite}/>
         <Route path='/beyond' exact component={BeyondLibrary}/>
         <Route path='/imgProcessing' exact component={ImgProcessing}/>

@@ -5,7 +5,7 @@ import '../styles/globalstyles.css';
 
 const LeftMonth = () => {
 
-    const { docs } = useFirestore('january-project-stories');
+    const { docs } = useFirestore('june-collection-stories');
     
     return (
             <Container>

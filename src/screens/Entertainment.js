@@ -6,16 +6,15 @@ import ArchiveModal from '../components/ArchiveModal';
 
 const Entertainment = () => {
 
-
-    const [modalImg, setModalImg] = useState(null);
+    const [modalInformation, setModalInformation] = useState({url: null, title: null, placement: null, caption: null});
     return (
         // <Container style={{backgroundColor: '#2e4a1e', borderRadius: "25px"}}>
         //     <Card imageName="entertainment-stories"/>
         // </Container>
-        <div>
-            <ArchiveCard setModalImg={setModalImg}/>
-            {modalImg && <ArchiveModal modalImg={modalImg} setModalImg={setModalImg}/>}
-        </div>
+        <Container>
+            <ArchiveCard setModalInformation={setModalInformation}/>
+            {modalInformation.title && <ArchiveModal modalInformation={modalInformation} setModalInformation={setModalInformation}/>}
+        </Container>
     )
 }
 

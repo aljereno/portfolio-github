@@ -63,6 +63,8 @@ const ProjectInfo = () => {
                     <li>Ongoing and Completed, will have a different design for its cards, where it will utilize three.js</li>
                     <li>June 17, 2021</li>
                     <li>Responsive web design</li>
+                    <li>July 2, 2021</li>
+                    <li>Start getting all sample pictures for all the entertainment things I did. Will take a while.</li>
                 </ul>
                 <p>Completed</p>
                 <ul>
@@ -76,6 +78,11 @@ const ProjectInfo = () => {
                     <li>Major overhaul of the webpage</li>
                     <li>June 21, 2021</li>
                     <li>Finished Elaboration on Flat foot and fire emblem related projects</li>
+                    <li>July 7, 2021</li>
+                    <li>Meant to create a bookshelf like way to show off the entertainment section, 
+                        but the css was too finicky. Found a use for the new custom cards for the
+                        archive section. Not flashy and perfect to show off the old stuff I was into. 
+                    </li>
                 </ul>
             </section>
             <h3>Progress</h3>

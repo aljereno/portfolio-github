@@ -15,7 +15,7 @@ const Homepage = () => {
             </div>
             <MiddleHomepage/>
             <div className="middleContainer" style={{fontSize: "10px", marginTop: "3rem", lineHeight: "1rem", paddingBottom: "1rem"}}>
-            <Container className="middleContainer middleExtra"><p>Archive</p></Container>
+            {/* <Container className="middleContainer middleExtra"><p>Archive</p></Container> */}
                 <p>Aljaed Lui Ereno </p>
                 <p>There isn't much to this world, so make the most of it.</p>
             </div>

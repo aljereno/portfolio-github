@@ -78,11 +78,16 @@ const ProjectInfo = () => {
                     <li>Major overhaul of the webpage</li>
                     <li>June 21, 2021</li>
                     <li>Finished Elaboration on Flat foot and fire emblem related projects</li>
-                    <li>July 7, 2021</li>
+                    <li>July 2, 2021</li>
                     <li>Meant to create a bookshelf like way to show off the entertainment section, 
                         but the css was too finicky. Found a use for the new custom cards for the
                         archive section. Not flashy and perfect to show off the old stuff I was into. 
                     </li>
+                    <li>July 5, 2021</li>
+                    <li>Added in new way to look at entertainment list, a lot more responsive and contains pictures and separate
+                        sections for different topics. 
+                    </li>
+                    <li>Currrently has just games, requires more time to get the movies/shows/books images up</li>
                 </ul>
             </section>
             <h3>Progress</h3>

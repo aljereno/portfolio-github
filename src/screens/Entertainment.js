@@ -6,20 +6,21 @@ import { Dropdown, Button } from 'react-bootstrap';
 const Entertainment = () => {
 
     const [modalInformation, setModalInformation] = useState({url: null, title: null, placement: null, caption: null});
-    const [firestore, setFirestore] = useState('2021-game-archive');
+    const [firestore, setFirestore] = useState('entertainment-stories');
 
     const divRef = useRef();
 
     useEffect(() => {
         divRef.current.textContent = firestore.replace(/[^A-Z0-9]/ig, " ").toUpperCase();
     }, [firestore])
+    console.log('new stuff');
     return (
         <Container style={{marginTop: '1rem'}}>
             <div style={{display: "flex"}}>
             <h3><Badge variant="info" ref={divRef}>Entertainment List</Badge></h3>
                 
                 <Dropdown style={{marginLeft: "1rem"}}>
-                <Button variant="primary" onClick={() => setFirestore('2021-game-archive')}>Current</Button>
+                <Button variant="primary" onClick={() => setFirestore('2017-game-archive')}>Current</Button>
                 <Dropdown.Toggle split variant="primary" id="dropdown-split-basic" />
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2017-game-archive')}>2017</Dropdown.Item>

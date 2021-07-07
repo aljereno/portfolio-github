@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Badge } from 'react-bootstrap';
 const ArchiveModal = ({modalInformation, setModalInformation}) => {
 
     const handleClick = (e) => {
@@ -10,10 +10,10 @@ const ArchiveModal = ({modalInformation, setModalInformation}) => {
 
     return (
         <div className="backdrop" onClick={handleClick}>
-            <Container style={{marginTop: '10rem', backgroundColor: "coral"}}>
-                <h1>{modalInformation.title}</h1>
-                <p>{modalInformation.caption}</p>
-                <img src={modalInformation.url} alt="enlarged"/>
+            <Container style={{marginTop: '10rem', backgroundColor: "#ADD8E6"}}>
+                <h1><Badge variant="light">{modalInformation.title}</Badge></h1>
+                <p style={{backgroundColor: "white", borderRadius: "15px", paddingLeft: "1rem"}}>{modalInformation.caption}</p>
+                {modalInformation.url && <img src={modalInformation.url} alt="enlarged"/>}
             </Container>
         </div>
     )

@@ -103,6 +103,7 @@
 }
 .entertain-wrap:hover{
   opacity: 0.5;
+  letter-spacing: 0.2em;
 }
 .entertain-wrap-single {
   height: auto;
@@ -121,25 +122,14 @@
 .headwrapper {
   width: 100%;
   height: 10px;
-  background-color: brown;
+  background-color: #CCEEFF;
+  margin-top: 1rem;
 }
 
 .floorWrapper {
   width: 100%;
   height: 10px;
-  background-color: brown;
+  background-color: #CCEEFF;
   margin-top: auto;
-}
-
-.sideWrapper {
-  width: 20px;
-  height: auto;
-  background-color: brown;
-}
-
-.endWrapper {
-  width: 20px;
-  height: auto;
-  background-color: brown;
-  margin-left: auto;
+  margin-bottom: 1rem;
 }

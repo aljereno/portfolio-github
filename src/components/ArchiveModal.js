@@ -13,7 +13,7 @@ const ArchiveModal = ({modalInformation, setModalInformation}) => {
             <Container style={{marginTop: '10rem', backgroundColor: "#ADD8E6"}}>
                 <h1><Badge variant="light">{modalInformation.title}</Badge></h1>
                 <p style={{backgroundColor: "white", borderRadius: "15px", paddingLeft: "1rem"}}>{modalInformation.caption}</p>
-                {/* {modalInformation.url && <img src={modalInformation.url} alt="enlarged"/>} */}
+                {modalInformation.url && <img src={modalInformation.url} alt="enlarged"/>}
             </Container>
         </div>
     )

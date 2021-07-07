@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 import { Container } from 'react-bootstrap';
 

@@ -17,10 +17,10 @@ const Entertainment = () => {
     return (
         <Container style={{marginTop: '1rem'}}>
             <div style={{display: "flex"}}>
-            <h3><Badge variant="info" ref={divRef}>Entertainment List</Badge></h3>
+            <h3><Badge variant="light" ref={divRef}>Entertainment List</Badge></h3>
                 
                 <Dropdown style={{marginLeft: "1rem"}}>
-                <Button variant="primary" onClick={() => setFirestore('2021-game-archive')}>Current</Button>
+                <Button variant="primary" onClick={() => setFirestore('2021-game-archive')}>Current Games</Button>
                 <Dropdown.Toggle split variant="primary" id="dropdown-split-basic" />
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2017-game-archive')}>2017</Dropdown.Item>
@@ -30,21 +30,27 @@ const Entertainment = () => {
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown style={{marginLeft: "1rem"}}>
-                <Button variant="primary" onClick={() => setFirestore('entertainment-stories')}>Books/Game/List</Button>
+                    <Button variant="primary" onClick={() => setFirestore('2021-print-archive')}>Current Books</Button>
                     <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
-                    
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2019-print-archive')}>2019</Dropdown.Item>
                         <Dropdown.Item onClick={() => setFirestore('2020-print-archive')}>2020</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown style={{marginLeft: "1rem"}}>
-                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                        Movies/Shows/Shorts
-                    </Dropdown.Toggle>
+                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Shows</Button>
+                    <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2019-movie-archive')}>2019</Dropdown.Item>
                         <Dropdown.Item onClick={() => setFirestore('2020-movie-archive')}>2020</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown style={{marginLeft: "1rem"}}>
+                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Movies</Button>
+                    <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
+                    <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => setFirestore('2019-show-archive')}>2019</Dropdown.Item>
+                        <Dropdown.Item onClick={() => setFirestore('2020-show-archive')}>2020</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

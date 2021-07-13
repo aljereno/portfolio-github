@@ -124,7 +124,7 @@ body{
 
 /* upload form styles */
 
-form{
+/* form{
   margin: 30px auto 10px;
   text-align: center;
 }
@@ -159,7 +159,7 @@ label:hover{
 
 .error{
   color: var(--error);
-}
+} */
 
 /* CSS styles for hovering over the card that could redirect folks to a project */
 

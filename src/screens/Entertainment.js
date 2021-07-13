@@ -13,7 +13,7 @@ const Entertainment = () => {
     useEffect(() => {
         divRef.current.textContent = firestore.replace(/[^A-Z0-9]/ig, " ").toUpperCase();
     }, [firestore])
-    console.log('new stuff');
+    
     return (
         <Container style={{marginTop: '1rem'}}>
             <div style={{display: "flex"}}>

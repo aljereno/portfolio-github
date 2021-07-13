@@ -12,10 +12,12 @@ const LeftMonth = () => {
                 <p>Current Month</p>
                 <div className="goalContainer">
                     {docs && docs.map(doc => (
-                        doc.placement <= 8 ? 
+                        doc.completed ? 
+                        <p key={doc.id}><strike>{doc.title}</strike></p>
+                        :
                         <p key={doc.id}>
                             {doc.title}
-                        </p> : <p></p>
+                        </p> 
                     ))}
                 </div>
             </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './screens/Homepage';
@@ -18,11 +18,15 @@ import BeyondLibrary from './singlescreens/BeyondLibrary';
 import ImgProcessing from './singlescreens/ImgProcessing';
 import FireChart from './singlescreens/FireChart';
 import FlatFoot from './singlescreens/FlatFoot';
+import Login from './screens/Login'
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <BrowserRouter>
-    <NavBar/>
+    <NavBar loggedIn={loggedIn}/>
     {/* //Switch makes sure that only one route is displayed as once, similar to exact keyword */}
       <Switch>
         <Route path='/' exact component={Homepage}/>
@@ -40,6 +44,7 @@ function App() {
         <Route path='/imgProcessing' exact component={ImgProcessing}/>
         <Route path='/fireChart' exact component={FireChart}/>
         <Route path='/flatFoot' exact component={FlatFoot}/>
+        <Route path='/adminLogin' exact component={() => <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>}/>
         <Route path='/' render={() => <div>404</div>}/>
       </Switch>
     </BrowserRouter>

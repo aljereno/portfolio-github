@@ -4,9 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import { Nav, Button, Modal, Form } from "react-bootstrap";
 import Badge from 'react-bootstrap/Badge';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase/config';
 
-const NavBar = ({loggedIn}) => {
+const NavBar = ({loggedIn, setLoggedIn}) => {
     console.log(loggedIn);
+
+    const onLoggedOff = () => {
+        setLoggedIn(false)
+        auth.signOut().then(() => {console.log("user signed out")})
+    }
     return (
         <Navbar expand="lg" sticky="top" style={{backgroundColor: '#E5AA70'}}>
             <Nav className="mr-auto">
@@ -23,9 +29,12 @@ const NavBar = ({loggedIn}) => {
                     <h4 className="navLinks" style={{paddingLeft: "3px", alignSelf: "flex-end"}}><Badge variant='secondary'>Entertainment</Badge></h4>
                 </Link>
             </Nav>
-            {!loggedIn && <Button variant="light">
+            {!loggedIn ? <Link to='/adminLogin'>
+                <Button variant="light">
                 <Badge>Login</Badge>
-            </Button>}
+            </Button></Link> : <Button variant="light" onClick={() => onLoggedOff()}>
+                <Badge>Logout</Badge>
+            </Button> }
         </Navbar>
         
     )

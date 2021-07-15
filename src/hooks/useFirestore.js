@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { projectFirestore } from '../firebase/config';
 
+//Grabs the specific collection and sorts based on placement
 const useFirestore = (collection) => {
     const [docs, setDocs] = useState([]);
 

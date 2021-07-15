@@ -26,13 +26,13 @@ function App() {
 
   return (
     <BrowserRouter>
-    <NavBar loggedIn={loggedIn}/>
+    <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
     {/* //Switch makes sure that only one route is displayed as once, similar to exact keyword */}
       <Switch>
         <Route path='/' exact component={Homepage}/>
         <Route path='/about' exact component={About}/>
         <Route path='/completed' exact component={Completed}/>
-        <Route path ='/entertainment' exact component={Entertainment}/>
+        <Route path ='/entertainment' exact component={() => <Entertainment loggedIn={loggedIn}/>}/>
         <Route path='/ongoing' exact component={Ongoing}/>
         <Route path='/genshinScreen' exact component={GenshinScreen}/>
         <Route path='/quarantine' exact component={Quarantine}/>

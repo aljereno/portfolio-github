@@ -3,7 +3,8 @@ import { Container, Badge} from 'react-bootstrap';
 import ArchiveCard from '../components/ArchiveCard';
 import ArchiveModal from '../components/ArchiveModal';
 import { Dropdown, Button } from 'react-bootstrap';
-const Entertainment = () => {
+import InputField from '../components/InputFields';
+const Entertainment = ({loggedIn}) => {
 
     const [modalInformation, setModalInformation] = useState({url: null, title: null, placement: null, caption: null});
     const [firestore, setFirestore] = useState('2021-game-archive');
@@ -56,6 +57,7 @@ const Entertainment = () => {
             </div>
             <ArchiveCard setModalInformation={setModalInformation} firestore={firestore}/>
             {modalInformation.title && <ArchiveModal modalInformation={modalInformation} setModalInformation={setModalInformation}/>}
+            {<InputField firestore={firestore}/>}
         </Container>
     )
 }

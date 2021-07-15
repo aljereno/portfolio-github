@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { auth } from '../firebase/config';
+import { Link } from 'react-router-dom';
 
 const Login = ({loggedIn, setLoggedIn}) => {
     const [email, setEmail] = useState(null);
@@ -19,19 +20,16 @@ const Login = ({loggedIn, setLoggedIn}) => {
             console.log(cred.user)
         }).catch(error => alert("Incorrect email and/or password"))
     }
-    const onLoggedOff = () => {
-        setLoggedIn(false)
-        auth.signOut().then(() => {console.log("user signed out")})
-    }
+
     return (
         <Container>
             {loggedIn ?
-            <div>
-                <h1> Already Logged In </h1>
-                <Button variant="primary" type="submit" onClick={onLoggedOff}>
-                    Log Out
-                </Button> 
-            </div>
+            <Container>
+                <h1> Logged In Successfully </h1>
+                <Link to="/insertPage">
+                    <Button>Go to form page</Button>
+                </Link> 
+            </Container>
             :
             <Form>
             <Form.Group controlId="formBasicEmail">

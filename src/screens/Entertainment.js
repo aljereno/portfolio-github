@@ -57,7 +57,7 @@ const Entertainment = ({loggedIn}) => {
             </div>
             <ArchiveCard setModalInformation={setModalInformation} firestore={firestore}/>
             {modalInformation.title && <ArchiveModal modalInformation={modalInformation} setModalInformation={setModalInformation}/>}
-            {<InputField firestore={firestore}/>}
+            {<InputField firestore={firestore} current={false}/>}
         </Container>
     )
 }

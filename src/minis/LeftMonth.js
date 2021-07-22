@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import InputField from '../components/InputFields';
 import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
 
@@ -20,6 +21,7 @@ const LeftMonth = () => {
                         </p> 
                     ))}
                 </div>
+                <InputField firestore={'june-collection-stories'} current={true}/>
             </Container>
     )
 }

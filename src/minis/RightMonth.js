@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
-
+import InputField from '../components/InputFields';
 const RightMonth = () => {
 
     const { docs } = useFirestore('july-collection-stories');
@@ -20,6 +20,7 @@ const RightMonth = () => {
                         </p> 
                     ))}
                 </div>
+                <InputField firestore={'july-collection-stories'} current={true}/>
             </Container>
 
     )

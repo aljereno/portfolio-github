@@ -39,7 +39,7 @@ const Entertainment = ({loggedIn}) => {
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown style={{marginLeft: "1rem"}}>
-                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Shows</Button>
+                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Movies</Button>
                     <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2019-movie-archive')}>2019</Dropdown.Item>
@@ -47,7 +47,7 @@ const Entertainment = ({loggedIn}) => {
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown style={{marginLeft: "1rem"}}>
-                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Movies</Button>
+                    <Button variant="primary" onClick={() => setFirestore('2021-show-archive')}>Current Shows</Button>
                     <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
                     <Dropdown.Menu>
                         <Dropdown.Item onClick={() => setFirestore('2019-show-archive')}>2019</Dropdown.Item>
@@ -57,7 +57,7 @@ const Entertainment = ({loggedIn}) => {
             </div>
             <ArchiveCard setModalInformation={setModalInformation} firestore={firestore}/>
             {modalInformation.title && <ArchiveModal modalInformation={modalInformation} setModalInformation={setModalInformation}/>}
-            {<InputField firestore={firestore} current={false}/>}
+            {loggedIn && <InputField firestore={firestore} current={false}/>}
         </Container>
     )
 }

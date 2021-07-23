@@ -111,7 +111,7 @@ const InputField = ({firestore, Current}) => {
                     </Form.Text>
                 </Form.Group>
                 <Button variant="light" onClick={furtherPlace}>
-                    LastButton
+                    Submit Entertainment
                 </Button>
             </Form>
         </Container>

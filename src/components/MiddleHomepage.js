@@ -1,10 +1,9 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import LeftMonth from '../minis/LeftMonth';
-import RightMonth from '../minis/RightMonth';
+import MonthlyGoals from '../minis/MonthlyGoals';
 import '../styles/globalstyles.css';
 
-const MiddleHomepage = () => {
+const MiddleHomepage = ({loggedIn}) => {
 
     return (
         <div>
@@ -14,8 +13,8 @@ const MiddleHomepage = () => {
                     </Container>
             </div>
             <div style={{display: "flex", textAlign: "center"}}>
-                <LeftMonth/>
-                <RightMonth/>
+                <MonthlyGoals leftOrient={true} loggedIn={loggedIn}/>
+                <MonthlyGoals leftOrient={false} loggedIn={loggedIn}/>
             </div>
         </div>
     )

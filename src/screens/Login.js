@@ -26,7 +26,7 @@ const Login = ({loggedIn, setLoggedIn}) => {
             {loggedIn ?
             <Container>
                 <h1> Logged In Successfully </h1>
-                <Link to="/insertPage">
+                <Link to="/entertainment">
                     <Button>Go to form page</Button>
                 </Link> 
             </Container>

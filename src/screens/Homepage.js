@@ -4,7 +4,7 @@ import MiddleHomepage from '../components/MiddleHomepage';
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
 
-const Homepage = () => {
+const Homepage = ({loggedIn}) => {
 
     return (    
         <div style={{backgroundColor: '#C4C4C4'}}>
@@ -13,7 +13,7 @@ const Homepage = () => {
                     <HeadCarousel/>
                 </Container>
             </div>
-            <MiddleHomepage/>
+            <MiddleHomepage loggedIn={loggedIn}/>
             <div className="middleContainer" style={{fontSize: "10px", marginTop: "3rem", lineHeight: "1rem", paddingBottom: "1rem"}}>
             {/* <Container className="middleContainer middleExtra"><p>Archive</p></Container> */}
                 <p>Aljaed Lui Ereno </p>

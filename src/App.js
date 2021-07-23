@@ -29,7 +29,7 @@ function App() {
     <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
     {/* //Switch makes sure that only one route is displayed as once, similar to exact keyword */}
       <Switch>
-        <Route path='/' exact component={Homepage}/>
+        <Route path='/' exact component={() => <Homepage loggedIn={loggedIn}/>}/>
         <Route path='/about' exact component={About}/>
         <Route path='/completed' exact component={Completed}/>
         <Route path ='/entertainment' exact component={() => <Entertainment loggedIn={loggedIn}/>}/>

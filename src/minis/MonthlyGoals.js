@@ -4,9 +4,10 @@ import InputField from '../components/InputFields';
 import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
 
-const LeftMonth = () => {
+const MonthlyGoals = ({leftOrient, loggedIn}) => {
 
-    const { docs } = useFirestore('june-collection-stories');
+    const orient = leftOrient ? 'june-collection-stories' : 'july-collection-stories';
+    const { docs } = useFirestore(`${orient}`);
     
     return (
             <Container>
@@ -21,9 +22,9 @@ const LeftMonth = () => {
                         </p> 
                     ))}
                 </div>
-                <InputField firestore={'june-collection-stories'} current={true}/>
+                {loggedIn && <InputField firestore={'june-collection-stories'} current={true}/>}
             </Container>
     )
 }
 
-export default LeftMonth;
+export default MonthlyGoals;

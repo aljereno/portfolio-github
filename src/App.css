@@ -95,15 +95,16 @@
 
 .entertain-wrap {
   display: 'flex';
-  margin-left: 0.85rem;
-  margin-right: 0.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.55rem;
   border-radius: 15px;
   margin-top: 0.50rem;
   margin-bottom: 0.25rem;
+  border-width: thick;
 }
 .entertain-wrap:hover{
   opacity: 0.5;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.01em;
 }
 .entertain-wrap-single {
   height: auto;

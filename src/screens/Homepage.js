@@ -3,7 +3,8 @@ import Container from 'react-bootstrap/Container';
 import MiddleHomepage from '../components/MiddleHomepage';
 import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
-
+import { Link } from 'react-router-dom';
+import {Badge} from 'react-bootstrap';
 const Homepage = ({loggedIn}) => {
 
     return (    
@@ -17,7 +18,10 @@ const Homepage = ({loggedIn}) => {
             <div className="middleContainer" style={{fontSize: "10px", marginTop: "3rem", lineHeight: "1rem", paddingBottom: "1rem"}}>
             {/* <Container className="middleContainer middleExtra"><p>Archive</p></Container> */}
                 <p>Aljaed Lui Ereno </p>
-                <p>There isn't much to this world, so make the most of it.</p>
+                {/* <p>There isn't much to this world, so make the most of it.</p> */}
+                <Link to='/adminLogin'>
+                    <Badge variant="dark">Login</Badge>
+                </Link>
             </div>
         </div>
     )

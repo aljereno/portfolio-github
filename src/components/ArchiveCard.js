@@ -10,11 +10,12 @@ const ArchiveCard = ({setModalInformation, firestore}) => {
     }
     
     return (
-        <Container style={{marginTop: "1rem", backgroundColor: "#ADD8E6", borderRadius: "1rem"}}>
+        //Teal Color
+        <Container style={{marginTop: "1rem", backgroundColor: "#ADD8E6", borderRadius: "1rem"}}> 
             <div className="entertain-flex">
                 {docs && docs.map(doc => (
                     <div className="entertain-wrap" 
-                        style={{backgroundColor: "#D5FFCC"}}
+                        style={{backgroundColor: "#D5FFCC"}} //Green Color
                         onClick={() => setInformation(doc)}
                         key={doc.placement}
                     >

@@ -18,7 +18,7 @@ const Entertainment = ({loggedIn}) => {
     return (
         <Container style={{marginTop: '1rem'}}>
             <div style={{display: "flex"}}>
-            <h3><Badge variant="light" ref={divRef}>Entertainment List</Badge></h3>
+            <h3><Badge bg="light" text="dark" ref={divRef}>Entertainment List</Badge></h3>
                 
                 <Dropdown style={{marginLeft: "1rem"}}>
                 <Button variant="primary" onClick={() => setFirestore('2021-game-archive')}>Current Games</Button>

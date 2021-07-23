@@ -10,19 +10,19 @@ const Completed = () => {
     let wrapper = createRef();
 
     return (
-        <div style={{width: "100%", backgroundColor: '#C2B280'}}>
-            <Container style={{backgroundColor: '#C2B280', color: "black", paddingBottom: "25px"}}>
+        
+            <Container style={{backgroundColor: '#C2B280', color: "black", paddingBottom: "25px", borderRadius: "15px"}}>
             <div ref={wrapper}>
-            { docs && docs.map(doc => (
-                <Link to={doc.link} style={{textDecoration: "none"}}>
-                    <div key={doc.placement} style={{ marginTop:"2rem", display: 'flex'}}>
+            { docs && docs.map((doc, index) => (
+                <Link key={index} to={doc.link} style={{textDecoration: "none"}}>
+                    <div key={index} style={{ marginTop:"2rem", display: 'flex'}}>
                     <div className="cardAttributes" style={{display: 'flex'}}>
                         <div style={{textAlign: "left", width: "100%", marginTop: "1rem"}}>
                             <div style={{display: "flex", marginBottom: "10px"}}>
                                 <h4 style={{paddingLeft: "10px", marginRight: "10px"}}><Button variant="dark">{doc.title}</Button></h4>
                                 <div style={{ display: "flex", flexWrap: "wrap"}}>
-                                    {doc.badges && doc.badges.map(attr => (
-                                        <div key={attr.key}><h6><Badge style={{marginLeft: "20px", marginTop: "10px"}} variant="secondary">{attr}</Badge></h6></div>
+                                    {doc.badges && doc.badges.map((attr, index) => (
+                                        <div key={index}><h6><Badge style={{marginLeft: "20px", marginTop: "10px"}} bg="secondary">{attr}</Badge></h6></div>
                                     ))}
                                 </div>
                             </div>
@@ -39,7 +39,7 @@ const Completed = () => {
             ))}
         </div>
         </Container>
-        </div>
+        
     )
 }
 

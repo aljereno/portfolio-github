@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import useFirestore from '../hooks/useFirestore';
 import { projectStorage, projectFirestore, timestamp } from '../firebase/config';
@@ -17,7 +17,6 @@ const InputField = ({firestore, Current}) => {
             tempNumber.push(doc.placement);
             return doc.placement;
         })
-        console.log(Math.max(...tempNumber) + 1);
         setEPlacement(Math.max(...tempNumber) + 1);
     }
 
@@ -73,17 +72,14 @@ const InputField = ({firestore, Current}) => {
         })
     }
     const furtherPlace = async () => {
-        const storageRef = projectStorage.ref();
-        const imagesRef = storageRef.child(`${firestore}/${eUrl.name}`);
+        //const storageRef = projectStorage.ref();
+        //const imagesRef = storageRef.child(`${firestore}/${eUrl.name}`);
         const collectionRef = projectFirestore.collection(`${firestore}`);
         const picUrl = await getUrl();
-        const newCollection = projectFirestore.collection("test");
-        newCollection.add({name: "test2", id: "2", newField: "false"});
         const createdAt = timestamp();
         // imagesRef.getDownloadURL().then((url) => {
         //     collectionRef.add({url, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
         // })
-        console.log(picUrl);
         collectionRef.add({url: picUrl, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
 
     }

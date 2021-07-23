@@ -11,7 +11,7 @@ const MonthlyGoals = ({leftOrient, loggedIn}) => {
     
     return (
             <Container>
-                <p>Current Month</p>
+                {leftOrient ? <p>Current Month</p> : <p>Next Month</p>}
                 <div className="goalContainer">
                     {docs && docs.map(doc => (
                         doc.completed ? 

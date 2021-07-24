@@ -43,51 +43,54 @@ const ProjectInfo = () => {
                 <h2>Goals List</h2>
                 <p>Contains a list of future updates in no particular order since inspiration can strike at anytime</p>
                 <ul>
-                    <li>Created on April 15, 2021   </li>
+                    <strong><li>Created on April 15, 2021</li></strong>
                     <li>Genshin Abyss, data refinement</li>
                     <li>Genshin Abyss, gallery animations</li>
                     <li>Genshin Abyss, Progress update on characters throughout the patches (Current Patch 1.4)</li>
-                    <li>Entertainment, have a drag and droppable component</li>
-                    <li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li>
+                    <strike><li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li></strike>
                     <strike><li>Ongoing, further elaborate on Project Emblem</li></strike>
                     <strike><li>Ongoing, further elaborate on Flat Foot</li></strike>
                     <strike><li>Components 1, update the card that will be used to display small info about everything</li></strike>
                     <strike><li>Components 2, update navbar to change based on what page you are on</li></strike>
                     <li>Completed, finish up the pictures for Quarantine</li>
                     <li>Completed, finish up pictures for Weatherbox</li>
-                    <li>Created on June 12, 2021</li>
-                    <li>Need to setup an authenticator</li>
-                    <li>Use authenticator to create login page</li>
-                    <li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li>
+                    <strong><li>Created on June 12, 2021</li></strong>
+                    <strike><li>Need to setup an authenticator</li></strike>
+                    <strike><li>Use authenticator to create login page</li></strike>
+                    <strike><li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li></strike>
                     <li>Create mockups/3d object generation of game boxes using Three.js</li>
-                    <li>Ongoing and Completed, will have a different design for its cards, where it will utilize three.js</li>
-                    <li>June 17, 2021</li>
+                    <li>Ongoing will have a different design for its cards, where it will utilize three.js</li>
+                    <strong><li>June 17, 2021</li></strong>
                     <li>Responsive web design</li>
-                    <li>July 2, 2021</li>
-                    <li>Start getting all sample pictures for all the entertainment things I did. Will take a while.</li>
+                    <strong><li>July 2, 2021</li></strong>
+                    <strike><li>Start getting all sample pictures for all the entertainment things I did. Will take a while.</li></strike>
                 </ul>
                 <p>Completed</p>
                 <ul>
-                    <li>June 13, 2021</li>
+                    <strong><li>June 13, 2021</li></strong>
                     <li>Components 1 finished, allowed for redirect to specific single screen pages</li>
                     <li>Deployed the website using firebase hosting</li>
-                    <li>June 14, 2021</li>
+                    <strong><li>June 14, 2021</li></strong>
                     <li>Added in the different pages containing all my past projects</li>
-                    <li>June 17, 2021</li>
+                    <strong><li>June 17, 2021</li></strong>
                     <li>Finished adding in blurbs, images to the cards in completed tab</li>
                     <li>Major overhaul of the webpage</li>
-                    <li>June 21, 2021</li>
+                    <strong><li>June 21, 2021</li></strong>
                     <li>Finished Elaboration on Flat foot and fire emblem related projects</li>
-                    <li>July 2, 2021</li>
+                    <strong><li>July 2, 2021</li></strong>
                     <li>Meant to create a bookshelf like way to show off the entertainment section, 
                         but the css was too finicky. Found a use for the new custom cards for the
                         archive section. Not flashy and perfect to show off the old stuff I was into. 
                     </li>
-                    <li>July 5, 2021</li>
+                    <strong><li>July 5, 2021</li></strong>
                     <li>Added in new way to look at entertainment list, a lot more responsive and contains pictures and separate
                         sections for different topics. 
                     </li>
                     <li>Currrently has just games, requires more time to get the movies/shows/books images up</li>
+                    <strong><li>July 24, 2021</li></strong>
+                    <li>Gathered all necessary data to populate the entertainment section</li>
+                    <li>Set up basic authentication to allow only select users to add into entertainment file</li>
+                    <li>Scrapped idea of being able to add in to Ongoing and Completed since its a process to get individual pages running</li>
                 </ul>
             </section>
             <h3>Progress</h3>

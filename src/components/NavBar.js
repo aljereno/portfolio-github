@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { auth } from '../firebase/config';
 
 const NavBar = ({loggedIn, setLoggedIn}) => {
-    console.log(loggedIn);
 
     const onLoggedOff = () => {
         setLoggedIn(false)
@@ -40,7 +39,7 @@ const NavBar = ({loggedIn, setLoggedIn}) => {
             {loggedIn && 
             <Nav>
                 <Nav.Item>
-                <Button variant="dark" onClick={() => onLoggedOff()}>
+                <Button onClick={() => onLoggedOff()}>
                     <Badge>Logout</Badge>
                 </Button>
                 </Nav.Item>

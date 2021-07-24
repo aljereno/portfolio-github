@@ -15,10 +15,13 @@ const Login = ({loggedIn, setLoggedIn}) => {
         setPass(e.target.value);
     }
     const onSubmit = () => {
-        setLoggedIn(true);
-        auth.signInWithEmailAndPassword(email, pass).then(cred => {
-            console.log(cred.user)
-        }).catch(error => alert("Incorrect email and/or password"))
+        if(email !== null && pass !== null){
+            auth.signInWithEmailAndPassword(email, pass).then(cred => {
+                setLoggedIn(true);
+            }).catch(error => {alert(error.message)})
+        } else {
+            alert("Missing Username or Password");
+        }
     }
 
     return (
@@ -44,9 +47,11 @@ const Login = ({loggedIn, setLoggedIn}) => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" onChange={e => {handlePass(e)}}/>
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={onSubmit}>
+            <Form.Group>
+            <Button style={{marginTop: "1rem"}}variant="primary" onClick={onSubmit}>
                 Submit
             </Button>
+            </Form.Group>
             </Form>
             }
         </Container>

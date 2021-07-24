@@ -22,7 +22,7 @@ const MonthlyGoals = ({leftOrient, loggedIn}) => {
                         </p> 
                     ))}
                 </div>
-                {loggedIn && <InputField firestore={'june-collection-stories'} current={true}/>}
+                {/* {loggedIn && <InputField firestore={'june-collection-stories'} current={true}/>} */}
             </Container>
     )
 }

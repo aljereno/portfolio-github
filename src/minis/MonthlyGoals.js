@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import InputField from '../components/InputFields';
+// import InputField from '../components/InputFields';
 import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
 
 const MonthlyGoals = ({leftOrient, loggedIn}) => {
 
-    const orient = leftOrient ? 'june-collection-stories' : 'july-collection-stories';
+    const orient = leftOrient ? 'august-collection-stories' : 'october-collection-stories';
     const { docs } = useFirestore(`${orient}`);
     
     return (

@@ -81,7 +81,10 @@ const InputField = ({firestore, Current}) => {
         //     collectionRef.add({url, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
         // })
         collectionRef.add({url: picUrl, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
-
+        setECaption(null);
+        setETitle(null);
+        setEUrl(null);
+        setEPlacement(null);
     }
 
     return (

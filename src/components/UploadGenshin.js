@@ -21,7 +21,7 @@ const UploadGenshin = () => {
     // }
 
     return (
-        <form>
+        <div>
             {/* <label>
                 <input type="file" onChange={changeHandler}/>
                 <span>+</span>
@@ -32,7 +32,7 @@ const UploadGenshin = () => {
                 { file && <div> {file.name} </div>}
                 { file && <Progress file={file} setFile={setFile}/>}
             </div>
-        </form>
+        </div>
     )
 }
 

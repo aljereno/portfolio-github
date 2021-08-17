@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 
+/*
+NOT IN USE
+Tree: Drag.js
+Objective: Contains experimental code that allows dragging of specific objects from one side of the screen to the other in a functional way
+*/
 const Drag = () => {
     let tasks = {
         inProgress: [],

@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+/*
+NOT IN USE
+Tree: screens/TestingScreen.js/Draggable.js
+Objective: Contains experimental code that allows dragging of specific objects from one side of the screen to the other in a class component way
+*/
+
+
 export default class ToDoDragDropDemo extends Component {
 
     state = {

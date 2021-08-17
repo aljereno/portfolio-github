@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useFirestore from '../hooks/useFirestore';
-import { Row, Col, Accordion, Badge } from 'react-bootstrap';
+import { Row, Col, Accordion, Badge, Button} from 'react-bootstrap';
 const ImageArea = ({ setSelectedImg }) => {
 
     //const { docs } = useFirestore('genshin-abyss-second');
     //const { docs } = useFirestore('images');
     const { docs } = useFirestore('genshin-character-progression');
-    //console.log(docs2);
-    // console.log(docs);
+    let pyroEleDMG = [], pyroEleRES = [];
+    const [filter, setFilter] = useState(null);
+    const getPyroEleDMG = (value, pos, specific) => {
+        const obj = {element: value, position: pos};
+        switch(specific){
+            case 'PyroDMG':
+                pyroEleDMG.push(obj);
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    const findPyroElement = () => {
+        
+    }
     return (
         <div style={{marginTop: "1rem"}}>
             {/* <div className="img-grid">
@@ -20,6 +35,7 @@ const ImageArea = ({ setSelectedImg }) => {
             ))}
             </div> */}
             <div>
+                <Button onClick={findPyroElement}>Click </Button>
                 {docs && docs.map((doc, index) => (
                     
                     <div key = {index}>
@@ -40,7 +56,7 @@ const ImageArea = ({ setSelectedImg }) => {
                                                 <p><b>Energy Recharge:</b> {doc.stats.erp}%</p>
                                                 <p><b>Elemental Status:</b> </p>
                                                 <ul>
-                                                    <li><b>Pyro DMG:</b> {doc.elemental[0]}%</li>
+                                                    <li><b>Pyro DMG:</b> {doc.elemental[0]}% {getPyroEleDMG(doc.elemental[0], doc.placement, 'PyroDMG')}</li>
                                                     <li><b>Pyro RES:</b> {doc.elemental[1]}%</li>
                                                     <li><b>Hydro DMG:</b> {doc.elemental[2]}%</li>
                                                     <li><b>Hydro RES:</b> {doc.elemental[3]}%</li>
@@ -180,7 +196,7 @@ const ImageArea = ({ setSelectedImg }) => {
                                                 <p><b>Energy Recharge:</b> {doc.stats.erp}%</p>
                                                 <p><b>Elemental Status:</b> </p>
                                                 <ul>
-                                                    <li><b>Pyro DMG:</b> {doc.elemental[0]}%</li>
+                                                    <li><b>Pyro DMG:</b> {doc.elemental[0]}% {getPyroEleDMG(doc.elemental[0])}</li>
                                                     <li><b>Pyro RES:</b> {doc.elemental[1]}%</li>
                                                     <li><b>Hydro DMG:</b> {doc.elemental[2]}%</li>
                                                     <li><b>Hydro RES:</b> {doc.elemental[3]}%</li>
@@ -303,7 +319,7 @@ const ImageArea = ({ setSelectedImg }) => {
                                 </Col>
                                 </Row>
                             </Col>
-                            <Col md="auto">{doc.url && <img style={{width: "auto", height: "auto  ", borderRadius: "25px"}}src={doc.url} alt="uploaded pic"/>} {console.log(doc.name)}</Col>
+                            <Col md="auto">{doc.url && <img style={{width: "auto", height: "auto  ", borderRadius: "25px"}}src={doc.url} alt="uploaded pic"/>}</Col>
                         </Row>
                         }
                     </div>

@@ -1,5 +1,12 @@
 import React from 'react';
 import { Container, Badge } from 'react-bootstrap';
+
+
+/*
+Objective: 
+Tree Structure: 
+*/ 
+
 const ArchiveModal = ({modalInformation, setModalInformation}) => {
 
     const handleClick = (e) => {

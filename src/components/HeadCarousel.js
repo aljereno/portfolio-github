@@ -4,6 +4,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import useFirestore from '../hooks/useFirestore';
 import '../styles/globalstyles.css';
 
+/**
+ * Objective: Part of the homepage, cycles/carousels through predetermined pictures set in the firebase collection ('carousel-images')
+ * Tree: Homepage.js/HeadCarousel.js
+ */
+
 const HeadCarousel = () => {
 
     const { docs } = useFirestore('carousel-images');

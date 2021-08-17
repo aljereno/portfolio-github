@@ -44,9 +44,9 @@ const ProjectInfo = () => {
                 <p>Contains a list of future updates in no particular order since inspiration can strike at anytime</p>
                 <ul>
                     <strong><li>Created on April 15, 2021</li></strong>
-                    <li>Genshin Abyss, data refinement</li>
+                    <strike><li>Genshin Abyss, data refinement</li></strike>
                     <li>Genshin Abyss, gallery animations</li>
-                    <li>Genshin Abyss, Progress update on characters throughout the patches (Current Patch 1.4)</li>
+                    <strike><li>Genshin Abyss, Progress update on characters throughout the patches (Current Patch 2.0)</li></strike>
                     <strike><li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li></strike>
                     <strike><li>Ongoing, further elaborate on Project Emblem</li></strike>
                     <strike><li>Ongoing, further elaborate on Flat Foot</li></strike>
@@ -91,16 +91,14 @@ const ProjectInfo = () => {
                     <li>Gathered all necessary data to populate the entertainment section</li>
                     <li>Set up basic authentication to allow only select users to add into entertainment file</li>
                     <li>Scrapped idea of being able to add in to Ongoing and Completed since its a process to get individual pages running</li>
+                    <strong><li>August 16</li></strong>
+                    <li>This deployment contains a purpose overhaul for my genshin, changed from abyss related to just a full on unit showcase.</li>
                 </ul>
             </section>
             <h3>Progress</h3>
             <p>Since I started the write-up late, my early problems have since disappeared from my noggin and will just update as I see fit.
                 It's not like this page is gonna get much traction anyways. 
             </p>
-            <p>Common screen sizes: 1366*768 = 22.6%</p>
-            <p>1920*1080 = 20.87%</p>
-            <p>375 * 812: iphone xs</p>
-            <p></p>
             <section>
                 
                 <div style={{alignContent: 'center'}}>

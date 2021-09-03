@@ -1,11 +1,8 @@
-.App {
-  text-align: center;
+
+* {
+  font-family:'Courier New', Courier, monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,124 +10,7 @@
   }
 } */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.rightContainer {
-  margin-top: 20px;
-  background-color: coral;
-  height: 50px;
-  margin-bottom: 20px;
-}
 
-/* CSS to define a draggable component */
-
-.drag-container {
-  text-align: center;
-}
-
-.head {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  background-color: #CCCCCC;
-  width:100%;
-}
-
-.droppable {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: 0;
-  top: 10;
-  background-color: #9E9E9E;
-  border-left: 2px dotted red;
-}
-
-.draggable {
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-  margin: 10px auto;
-}
-
-.inProgress {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 0;
-  top: 10;
-  background-color: #EEEEEE;
-  border-right: 2px dotted red;
-}
-
-.entertain-grid {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
-.entertain-wrap {
-  display: 'flex';
-  margin-left: 0.75rem;
-  margin-right: 0.55rem;
-  border-radius: 15px;
-  margin-top: 0.50rem;
-  margin-bottom: 0.25rem;
-  border-width: thick;
-}
-.entertain-wrap:hover{
-  opacity: 0.5;
-  letter-spacing: 0.01em;
-}
-.entertain-wrap-single {
-  height: auto;
-  font-size: 20px;
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 4px 4px 4px 4px;
-  border-radius: 5px;
-  width: 125px;
-}
-
-.entertain-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.headwrapper {
-  width: 100%;
-  height: 10px;
-  background-color: #CCEEFF;
-  margin-top: 1rem;
-}
-
-.floorWrapper {
-  width: 100%;
-  height: 10px;
-  background-color: #CCEEFF;
-  margin-top: auto;
-  margin-bottom: 1rem;
-}

@@ -13,39 +13,39 @@ const NavBar = ({loggedIn, setLoggedIn}) => {
         auth.signOut().then(() => {console.log("user signed out")})
     }
     return (
-        <Navbar expand="lg" sticky="top" style={{backgroundColor: '#E5AA70'}}>
+        <Navbar collapseOnSelect expand="lg" sticky="top" style={{backgroundColor: '#E5AA70'}}>    
+            <Nav className="me-auto">
+            <Nav.Item  style={{marginTop: "0.1rem"}}>
+            <Link to='/'>
+                <h3 className="navLinks" ><Badge variant='secondary'>Home</Badge></h3>
+            </Link>
+            </Nav.Item> 
+            </Nav>       
+            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
                 <Nav.Item>
-                    <Link to='/'>
-                        <h4 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Home</Badge></h4>
-                    </Link>
-                </Nav.Item>
-                <Nav.Item>
                     <Link to='completed'>
-                        <h4 className="navLinks" style={{paddingLeft: "5px"}}><Badge variant='secondary'>Completed</Badge></h4>
+                        <h5 className="navLinks" style={{paddingLeft: "5px"}}><Badge variant='secondary'>Completed</Badge></h5>
                     </Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Link to='/ongoing'>
-                        <h4 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Ongoing</Badge></h4>
+                        <h5 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Ongoing</Badge></h5>
                     </Link> 
                 </Nav.Item>
                 <Nav.Item>
                     <Link to='/entertainment'>
-                        <h4 className="navLinks" style={{paddingLeft: "3px", alignSelf: "flex-end"}}><Badge variant='secondary'>Entertainment</Badge></h4>
+                        <h5 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Entertainment</Badge></h5>
                     </Link>
                 </Nav.Item>
-            </Nav>
-            {loggedIn && 
-            <Nav>
+                {loggedIn && 
                 <Nav.Item>
-                <Button onClick={() => onLoggedOff()}>
-                    <Badge>Logout</Badge>
-                </Button>
-                </Nav.Item>
-            </Nav> }
+                    <Button onClick={() => onLoggedOff()}> Logout </Button>
+                </Nav.Item>}
+            </Nav>
+            </Navbar.Collapse>
         </Navbar>
-        
     )
 }
 

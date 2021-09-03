@@ -6,13 +6,10 @@ import { Document, Page } from 'react-pdf';
 
 const ProjectInfo = ({setProjectInfo}) => {
     const { docs } = useFirestore('completed-stories');
-    // console.log(docs[0].url);
-    console.log(docs[0]);
     let urlHolder = [];
     let currUrl = null;
     const example = (d) => {
         urlHolder.push(d.url);
-        console.log(d.url)
     }
     const updateUrl = () => {
         currUrl = urlHolder[0];
@@ -36,19 +33,3 @@ const ProjectInfo = ({setProjectInfo}) => {
 }
 
 export default ProjectInfo;
-
-
-{/* <Container>
-                    <p style={{textAlign: "center"}}>Completed</p>
-                    { docs && docs.map(doc => (
-                        <Container key={doc.id}>
-                            <Link to='/projectInfo'>
-                            <p href={doc.url}>
-                                {doc.title}
-                                {doc.synopsis}
-                            </p>
-                            </Link>
-                        {/* <img src={doc.url} alt="pdf"/> */}
-                //         </Container>
-                //     ))}
-                // </Container> */}

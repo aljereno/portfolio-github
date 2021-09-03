@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-
+import { Container, Tabs, Tab} from 'react-bootstrap';
+import { motion } from 'framer-motion';
 const ProjectInfo = () => {
     return (
-        <Container>
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 2}}>
+            <Container>
             <h1 style={{textAlign: 'center'}}>Project info</h1>
             <h2>Technolgies Used: </h2>
             <ul>
@@ -14,7 +15,9 @@ const ProjectInfo = () => {
                 <li>Firebase Authentication</li>
                 <li>Firebase Hosting</li>
             </ul>
-            <h3>Objective</h3>
+            <Tabs defaultActiveKey="info">
+                <Tab eventKey="info" title="Information">
+                <h3>Objective</h3>
             <p> To create a website/blog page featuring my previous school projects and side projects. Also this is a way to fully learn
                 the basics of React, Firebase Firestore and other smaller technologies within the React ecosystem. Something about me, I 
                 enjoy reading about the progress of other people's projects; the final product is no doubt mesmerizing, but the rode to get
@@ -45,7 +48,7 @@ const ProjectInfo = () => {
                 <ul>
                     <strong><li>Created on April 15, 2021</li></strong>
                     <strike><li>Genshin Abyss, data refinement</li></strike>
-                    <li>Genshin Abyss, gallery animations</li>
+                    <strike><li>Genshin Abyss, gallery animations</li></strike>
                     <strike><li>Genshin Abyss, Progress update on characters throughout the patches (Current Patch 2.0)</li></strike>
                     <strike><li>Entertainment, contain lists of all the shtuff that I want to watch, play or read</li></strike>
                     <strike><li>Ongoing, further elaborate on Project Emblem</li></strike>
@@ -58,14 +61,15 @@ const ProjectInfo = () => {
                     <strike><li>Need to setup an authenticator</li></strike>
                     <strike><li>Use authenticator to create login page</li></strike>
                     <strike><li>As the main user, be able to easily add in new items to Entertainment, Ongoing, Completed</li></strike>
-                    <li>Create mockups/3d object generation of game boxes using Three.js</li>
-                    <li>Ongoing will have a different design for its cards, where it will utilize three.js</li>
                     <strong><li>June 17, 2021</li></strong>
-                    <li>Responsive web design</li>
+                    <strike><li>Responsive web design, or as much as I could</li></strike>
                     <strong><li>July 2, 2021</li></strong>
                     <strike><li>Start getting all sample pictures for all the entertainment things I did. Will take a while.</li></strike>
                 </ul>
-                <p>Completed</p>
+                <h3>Progress</h3>
+                <p>Since I started the write-up late, my early problems have since disappeared from my noggin and will just update as I see fit.
+                It's not like this page is gonna get much traction anyways. 
+                </p>
                 <ul>
                     <strong><li>June 13, 2021</li></strong>
                     <li>Components 1 finished, allowed for redirect to specific single screen pages</li>
@@ -93,24 +97,23 @@ const ProjectInfo = () => {
                     <li>Scrapped idea of being able to add in to Ongoing and Completed since its a process to get individual pages running</li>
                     <strong><li>August 16</li></strong>
                     <li>This deployment contains a purpose overhaul for my genshin, changed from abyss related to just a full on unit showcase.</li>
+                    <strong><li>September 3</li></strong>
+                    <li>Contains animation's for the pages. Navbar does change on view. Different style and color choices. In terms of responsive
+                        web design, I am at a loss on how to handle the homepage. Not too sure if I should just redesign the whole thing.
+                    </li>
                 </ul>
             </section>
-            <h3>Progress</h3>
-            <p>Since I started the write-up late, my early problems have since disappeared from my noggin and will just update as I see fit.
-                It's not like this page is gonna get much traction anyways. 
-            </p>
-            <section>
-                
-                <div style={{alignContent: 'center'}}>
-                    <img 
+                </Tab>
+                <Tab eventKey="gallery" title="Gallery">
+                <img 
                     style={{width: '100%', height: '100%'}}
                     src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/ProjectPDFs%2FearlyPrototype.JPG?alt=media&token=b9a66b9a-9601-41e4-8f4b-681f989bbcdc' 
                     alt='Early prototype of dashboard'/>
                     <p style={{textAlign : 'center'}}>Needed to determine how I would prototype the dashboard, settled on using a site called Figma</p>
-                </div>
-            </section>
-            <h3>Gallery Images of the things I created in this project using Figma: </h3>
+                </Tab>
+            </Tabs>
         </Container>
+        </motion.div>
     )
 }
 

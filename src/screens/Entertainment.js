@@ -1,9 +1,11 @@
 import React, {useEffect, useState, useRef} from 'react';
-import { Container, Badge} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import ArchiveCard from '../components/ArchiveCard';
 import ArchiveModal from '../components/ArchiveModal';
-import { Dropdown, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import InputField from '../components/InputFields';
+import { motion } from 'framer-motion';
+
 const Entertainment = ({loggedIn}) => {
 
     const [modalInformation, setModalInformation] = useState({url: null, title: null, placement: null, caption: null});
@@ -16,49 +18,57 @@ const Entertainment = ({loggedIn}) => {
     }, [firestore])
     
     return (
-        <Container style={{marginTop: '1rem'}}>
-            <div style={{display: "flex"}}>
-            <h3><Badge bg="light" text="dark" ref={divRef}>Entertainment List</Badge></h3>
-                
-                <Dropdown style={{marginLeft: "1rem"}}>
-                <Button variant="primary" onClick={() => setFirestore('2021-game-archive')}>Current Games</Button>
-                <Dropdown.Toggle split variant="primary" id="dropdown-split-basic" />
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => setFirestore('2017-game-archive')}>2017</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2018-game-archive')}>2018</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2019-game-archive')}>2019</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2020-game-archive')}>2020</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown style={{marginLeft: "1rem"}}>
-                    <Button variant="primary" onClick={() => setFirestore('2021-print-archive')}>Current Books</Button>
-                    <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => setFirestore('2019-print-archive')}>2019</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2020-print-archive')}>2020</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown style={{marginLeft: "1rem"}}>
-                    <Button variant="primary" onClick={() => setFirestore('2021-movie-archive')}>Current Movies</Button>
-                    <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => setFirestore('2019-movie-archive')}>2019</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2020-movie-archive')}>2020</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown style={{marginLeft: "1rem"}}>
-                    <Button variant="primary" onClick={() => setFirestore('2021-show-archive')}>Current Shows</Button>
-                    <Dropdown.Toggle variant="primary" id="dropdown-split-basic"/>
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => setFirestore('2019-show-archive')}>2019</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setFirestore('2020-show-archive')}>2020</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+        <motion.div initial={{y:-100, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1}}>
+            <Container style={{marginTop: '1rem'}}>
+            <Navbar expand="lg">
+                <Container fluid>
+                <Navbar.Brand  ref={divRef}>Entertainment List</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbar-dark-example" />
+                <Navbar.Collapse id="navbar-game" >
+                <Nav>
+                    <NavDropdown title="Games">
+                        <NavDropdown.Item onClick={() => {setFirestore('2021-game-archive')}}>2021</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2020-game-archive')}}>2020</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2019-game-archive')}}>2019</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2018-game-archive')}}>2018</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2017-game-archive')}}>2017</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                </Navbar.Collapse>
+                <Navbar.Collapse id="navbar-print">
+                <Nav>
+                    <NavDropdown title="Prints">
+                        <NavDropdown.Item onClick={() => {setFirestore('2021-print-archive')}}>2021</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2020-print-archive')}}>2020</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2019-print-archive')}}>2019</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                </Navbar.Collapse>
+                <Navbar.Collapse id="navbar-movie">
+                <Nav>
+                    <NavDropdown title="Movies">
+                        <NavDropdown.Item onClick={() => {setFirestore('2021-movie-archive')}}>2021</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2020-movie-archive')}}>2020</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2019-movie-archive')}}>2019</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                </Navbar.Collapse>
+                <Navbar.Collapse id="navbar-show">
+                <Nav>
+                    <NavDropdown title="Shows">
+                        <NavDropdown.Item onClick={() => {setFirestore('2021-show-archive')}}>2021</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2020-show-archive')}}>2020</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => {setFirestore('2019-show-archive')}}>2019</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                </Navbar.Collapse>
+                </Container>
+            </Navbar>
             <ArchiveCard setModalInformation={setModalInformation} firestore={firestore}/>
             {modalInformation.title && <ArchiveModal modalInformation={modalInformation} setModalInformation={setModalInformation}/>}
             {loggedIn && <InputField firestore={firestore} current={false}/>}
         </Container>
+        </motion.div>
     )
 }
 

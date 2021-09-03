@@ -5,10 +5,12 @@ import HeadCarousel from '../components/HeadCarousel';
 import '../styles/globalstyles.css';
 import { Link } from 'react-router-dom';
 import {Badge} from 'react-bootstrap';
+import { motion } from 'framer-motion';
+
 const Homepage = ({loggedIn}) => {
 
     return (    
-        <div style={{backgroundColor: '#C4C4C4'}}>
+        <motion.div initial={{opacity: 0, x: -100}} animate={{opacity: 1, x: 0}} transition={{delay: 0.5, duration: 0.5}} exit={{opacity: 0.2}}>
             <div style={{display: "flex"}}>
                 <Container style={{marginTop: "20px", marginBottom: "20px", borderRadius: "25px", flex: "0 0 70%"}}>
                     <HeadCarousel/>
@@ -16,14 +18,12 @@ const Homepage = ({loggedIn}) => {
             </div>
             <MiddleHomepage loggedIn={loggedIn}/>
             <div className="middleContainer" style={{fontSize: "10px", marginTop: "3rem", lineHeight: "1rem", paddingBottom: "1rem"}}>
-            {/* <Container className="middleContainer middleExtra"><p>Archive</p></Container> */}
                 <p>Aljaed Lui Ereno </p>
-                {/* <p>There isn't much to this world, so make the most of it.</p> */}
                 <Link to='/adminLogin'>
                     <Badge variant="dark">Login</Badge>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

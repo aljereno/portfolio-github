@@ -1,13 +1,14 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import '../styles/globalstyles.css';
 import Card from '../minis/Card';
-
+import { motion } from 'framer-motion';
 const Ongoing = () => {
     return (
-        <Container style={{backgroundColor: '#2e4a1e', borderRadius: "25px"}}>
-            <Card imageName={'ongoing-stories'}/>  
-        </Container>
+        <motion.div initial={{opacity: 0, y: 100}} animate={{opacity: 1, y:0}} transition={{duration: 1}}>
+            <Container style={{backgroundColor: 'wheat', borderRadius: "25px", paddingBottom: "0.5rem"}}>
+                <Card imageName={'ongoing-stories'}/>  
+            </Container>
+        </motion.div>
     )
 }
 

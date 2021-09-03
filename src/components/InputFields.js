@@ -9,7 +9,7 @@ const InputField = ({firestore, Current}) => {
     const [eUrl, setEUrl] = useState(null);
     const [eCaption, setECaption] = useState(null);
     const [ePlacement, setEPlacement] = useState(null);
-    
+    const [eDate, setEDate] = useState(null);
 
     const findPlacement = () => {
         const tempNumber = [];
@@ -30,7 +30,6 @@ const InputField = ({firestore, Current}) => {
         } else {
             setEUrl(null);
         }
-        console.log(selected)
     }
 
     // const placeImage = () => {
@@ -80,11 +79,13 @@ const InputField = ({firestore, Current}) => {
         // imagesRef.getDownloadURL().then((url) => {
         //     collectionRef.add({url, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
         // })
-        collectionRef.add({url: picUrl, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
+        collectionRef.add({url: picUrl, createdAt, placement: ePlacement, title: eTitle, caption: eCaption, date: eDate});
+        console.log(eTitle);
         setECaption(null);
         setETitle(null);
         setEUrl(null);
         setEPlacement(null);
+        setEDate(null);
     }
 
     return (
@@ -107,6 +108,13 @@ const InputField = ({firestore, Current}) => {
                     <Form.Control type="text" placeholder="Enter description" onChange={e => {setECaption(e.target.value)}}/>
                     <Form.Text className="text-muted">
                         Write a caption, or don't; It doesn't really matter.
+                    </Form.Text>
+                </Form.Group>
+                <Form.Group controlId="formBasicDate">
+                    <Form.Label>Date</Form.Label>
+                    <Form.Control type="text" placeholder="Enter date" onChange={e => {setEDate(e.target.value)}}/>
+                    <Form.Text className="text-muted">
+                        Write a caption the date you finished.
                     </Form.Text>
                 </Form.Group>
                 <Button variant="light" onClick={furtherPlace}>

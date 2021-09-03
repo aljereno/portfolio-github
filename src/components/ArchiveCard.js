@@ -1,25 +1,30 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 import { Container } from 'react-bootstrap';
-
+import { motion } from 'framer-motion';
 const ArchiveCard = ({setModalInformation, firestore}) => {
-    const { docs } = useFirestore(firestore)
+
+    const { docs } = useFirestore(firestore);
 
     const setInformation = (e) => {
         setModalInformation({title: e.title, caption: e.caption, url: e.url, placement: e.placement});
     }
-    
+
     return (
-        //Teal Color
-        <Container style={{marginTop: "1rem", backgroundColor: "#ADD8E6", borderRadius: "1rem"}}> 
-            <div className="entertain-flex">
+        <Container style={{marginTop: "1rem", backgroundColor: "wheat", borderRadius: "1rem"}}> 
+            <div className="entertain-grid">
                 {docs && docs.map(doc => (
-                    <div className="entertain-wrap" 
-                        style={{backgroundColor: "#D5FFCC"}} //Green Color
+                    <div  className="entertain-wrap" 
                         onClick={() => setInformation(doc)}
-                        key={doc.placement}
+                        key={doc.uid}
                     >
-                        <h1 className="entertain-wrap-single"><b>{doc.title}</b></h1>
+                        {doc.url && 
+                            <motion.img 
+                                initial={{scaleY: 0}} 
+                                animate={{scaleY: 1}} 
+                                transition={{duration: 1}}
+                                src={doc.url} 
+                                alt="uploaded pic" />}
                     </div>
                 ))}
             </div>

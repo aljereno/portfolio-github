@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import MonthlyGoals from '../minis/MonthlyGoals';
 import '../styles/globalstyles.css';
-import InputMonthly from './InputMonthly';
 
 const MiddleHomepage = ({loggedIn}) => {
 
@@ -17,7 +16,6 @@ const MiddleHomepage = ({loggedIn}) => {
                 <MonthlyGoals leftOrient={true} loggedIn={loggedIn}/>
                 <MonthlyGoals leftOrient={false} loggedIn={loggedIn}/>
             </div>
-            {/* <InputMonthly/> */}
         </div>
     )
 }

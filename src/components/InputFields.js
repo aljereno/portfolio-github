@@ -32,26 +32,6 @@ const InputField = ({firestore, Current}) => {
         }
     }
 
-    // const placeImage = () => {
-    //     const imagesRef = projectStorage.ref().child(`${firestore}/${eUrl.name}`);
-
-    //     // imagesRef.put(eUrl).on('state_changed', (snapshot) => {
-    //     //     console.log(`Inserted ${eUrl.name}`);
-    //     //     var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    //     //     console.log(progress);  
-    //     // }, async () => {
-    //     //     console.log('awaiting things');
-    //     //     const url = await imagesRef.getDownloadURL();
-    //     //     const createdAt = timestamp();
-    //     //     console.log(`${url}, ${createdAt}, ${eTitle}, ${eCaption}, ${ePlacement}`)
-    //     //     collectionRef.add({url, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
-    //     // });
-    //     imagesRef.put(eUrl).on('state_changed', (snapshot) => {
-    //         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    //         console.log(progress);  
-    //     });
-    // }
-
     const getUrl = async () => {
         const imagesRef = projectStorage.ref().child(`${firestore}/${eUrl.name}`);
         const metaData = {
@@ -71,14 +51,9 @@ const InputField = ({firestore, Current}) => {
         })
     }
     const furtherPlace = async () => {
-        //const storageRef = projectStorage.ref();
-        //const imagesRef = storageRef.child(`${firestore}/${eUrl.name}`);
         const collectionRef = projectFirestore.collection(`${firestore}`);
         const picUrl = await getUrl();
         const createdAt = timestamp();
-        // imagesRef.getDownloadURL().then((url) => {
-        //     collectionRef.add({url, createdAt, placement: ePlacement, title: eTitle, caption: eCaption})
-        // })
         collectionRef.add({url: picUrl, createdAt, placement: ePlacement, title: eTitle, caption: eCaption, date: eDate});
         console.log(eTitle);
         setECaption(null);

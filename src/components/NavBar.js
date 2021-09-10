@@ -35,8 +35,8 @@ const NavBar = ({loggedIn, setLoggedIn}) => {
                     </Link> 
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to='/entertainment'>
-                        <h5 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Entertainment</Badge></h5>
+                    <Link to='/profile'>
+                        <h5 className="navLinks" style={{paddingLeft: "3px"}}><Badge variant='secondary'>Profile</Badge></h5>
                     </Link>
                 </Nav.Item>
                 {loggedIn && 

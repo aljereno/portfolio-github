@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Tabs, Tab } from 'react-bootstrap';
 
 const Quarantine = () => {
     return (
@@ -17,7 +17,9 @@ const Quarantine = () => {
                 <li>Language C#</li>
                 <li>Unity Game Engine</li>
             </ul>
-            <h2>Lessons Learned</h2>
+            <Tabs defaultActiveKey="main">
+                <Tab eventKey="main" title="Quarantine Information">
+                <h2>Lessons Learned</h2>
             <p> 
                 As we went through the class we learned various techniques in handling screens, menu, lightning, creating models/shaders/materials, collissions etc. 
                 With these basic understanding of game development, we developed two levels that showcase the weighty and floaty nature of our posterior heavy man. 
@@ -40,6 +42,32 @@ const Quarantine = () => {
                         All in all, me and my partner learned a great deal with not only coding but navigating and interacting with Unity itself. 
                 There are plans to create more basic games that utilize unity and are disussed in the other pages. 
             </p>
+                </Tab>
+                <Tab eventKey="gallery" title="Gallery">
+                    <div style={{display: "flex", flexWrap: "wrap"}}>
+                    <img 
+                    style={{width: '50%', height: '50%'}}
+                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2FCollectibles.JPG?alt=media&token=a74330ca-3aa7-45b4-8573-9e73c9df5893' 
+                    alt='Early prototype of dashboard'/>
+                    <p>Figure 1: Collectibles</p>
+                    <img 
+                    style={{width: '50%', height: '50%'}}
+                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fenemies.JPG?alt=media&token=825d2b3d-7233-4d4d-a9d0-51ae383f9ba0' 
+                    alt='Early prototype of dashboard'/>
+                    <p style={{textAlign : 'center'}}>Figure 2: Enemies</p>
+                    <img 
+                    style={{width: '50%', height: '50%'}}
+                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fmap1CollectibleLocations.JPG?alt=media&token=82d7795c-c624-470b-bb48-de29d6c3717e' 
+                    alt='Early prototype of dashboard'/>
+                    <p style={{textAlign : 'center'}}>Figure 3: Map 1 Collectible Locations</p>
+                    <img 
+                    style={{width: '50%', height: '50%'}}
+                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fmap2CollectibleLocations.JPG?alt=media&token=6b73ec73-7130-42ac-a057-a1a51df4d4e9' 
+                    alt='Early prototype of dashboard'/>
+                    <p style={{textAlign : 'center'}}>Figure 4: Map 2 Collectible Locations</p>
+                    </div>
+                </Tab>
+            </Tabs>
         </Container>
     )
 }

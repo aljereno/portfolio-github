@@ -15,7 +15,7 @@ const HeadCarousel = () => {
     const wrapper = createRef();
 
     return (
-        <Container>
+        <Container className="carouselImages">
           <Carousel>
             {docs && docs.map(doc => (
               <Carousel.Item ref={wrapper} key={doc.placement}>

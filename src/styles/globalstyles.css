@@ -70,6 +70,18 @@
   opacity: 0.7;
 }
 
+.completedAttributes {
+  background-color: #E5AA70;
+  width: 100%;
+  margin-top: 1em;
+  margin-right: 2em;
+  border-radius: 1em;
+  display: flex;
+}
+
+.completedAttributes:hover {
+  opacity: 0.5;
+}
 /* Changes the color of the link tag also, since link tag is transpiled from an a tag*/
 a {
   color: black;
@@ -89,6 +101,14 @@ a {
 
 body {
   background-color: #d8d7d5;
+  /* background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: cover;
+    
+    
+    
+    height: 100%;
+    padding:0;
+    margin:0; */
 }
 
 /* For the sticky table of contents in gensin impact section */
@@ -169,6 +189,11 @@ h4 {
   color:white;
 }
 
+.ongoingBox > p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .ongoingImg{
   max-height: 100%;
   max-width: 100%;
@@ -179,4 +204,71 @@ h4 {
   .unitImage {
     margin-left: 4.5rem;
   }
+  .carouselImages {
+    display: none !important
+  }
+
+  .completedImg {
+    display: none !important
+  }
+  .miniDisplay {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.completedImg {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 15px;
+  padding-bottom: 10px;
+}
+
+
+/* Will be on the static sites to make the text look nicer */
+.basicTextBox {
+  border-radius: 20px;
+}
+
+.basicTextBox > p,ul, li {
+  margin: 1rem;
+}
+
+.basicTextBox > h3 {
+  margin: 1rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.icons:hover {
+  opacity: 0.5;
+}
+
+.icons {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.miniResume {
+  flex: 50%;
+  background-color: wheat;
+  margin: 1rem;
+  border-radius: 0 15px 0 15px;
+}
+
+.miniResume > p {
+  margin-left: 1rem;
+  text-align: justify;
+  margin-right: 1rem;
+}
+
+.miniResume > h3 {
+  padding-left: 1rem;
+  background-color: beige;
+  border-radius: 0 15px 0 0;
+}
+
+.miniDisplay {
+  display: flex;
+  
 }

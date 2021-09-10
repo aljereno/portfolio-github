@@ -55,8 +55,8 @@ const ProjectInfo = () => {
                     <strike><li>Ongoing, further elaborate on Flat Foot</li></strike>
                     <strike><li>Components 1, update the card that will be used to display small info about everything</li></strike>
                     <strike><li>Components 2, update navbar to change based on what page you are on</li></strike>
-                    <li>Completed, finish up the pictures for Quarantine</li>
-                    <li>Completed, finish up pictures for Weatherbox</li>
+                    <strike><li>Completed, finish up the pictures for Quarantine</li></strike>
+                    <strike><li>Completed, finish up pictures for Weatherbox</li></strike>
                     <strong><li>Created on June 12, 2021</li></strong>
                     <strike><li>Need to setup an authenticator</li></strike>
                     <strike><li>Use authenticator to create login page</li></strike>
@@ -65,6 +65,9 @@ const ProjectInfo = () => {
                     <strike><li>Responsive web design, or as much as I could</li></strike>
                     <strong><li>July 2, 2021</li></strong>
                     <strike><li>Start getting all sample pictures for all the entertainment things I did. Will take a while.</li></strike>
+                    <strong><li>September 7th, 2021</li></strong>
+                    <strike><li>Add in profile page/about me</li></strike>
+                    <strike><li>Create a section within it that I can showcase what I learned about a specific topic</li></strike>
                 </ul>
                 <h3>Progress</h3>
                 <p>Since I started the write-up late, my early problems have since disappeared from my noggin and will just update as I see fit.
@@ -101,6 +104,8 @@ const ProjectInfo = () => {
                     <li>Contains animation's for the pages. Navbar does change on view. Different style and color choices. In terms of responsive
                         web design, I am at a loss on how to handle the homepage. Not too sure if I should just redesign the whole thing.
                     </li>
+                    <strong><li>September 10</li></strong>
+                    <li>Contains profile page, revamped homepage, added images for Quarantine and Weatherboxs</li>
                 </ul>
             </section>
                 </Tab>

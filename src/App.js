@@ -17,9 +17,10 @@ import ImgProcessing from './singlescreens/ImgProcessing';
 import FireChart from './singlescreens/FireChart';
 import FlatFoot from './singlescreens/FlatFoot';
 import Login from './screens/Login'
+import Profile from './singlescreens/Profile';
 import { AnimatePresence } from 'framer-motion';
-import { Container
- } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+
 function App() {
   const location = useLocation();
   const [loggedIn, setLoggedIn] = useState(false);
@@ -42,6 +43,7 @@ function App() {
           <Route path='/imgProcessing' exact component={ImgProcessing}/>
           <Route path='/fireChart' exact component={FireChart}/>
           <Route path='/flatFoot' exact component={FlatFoot}/>
+          <Route path='/profile' exact component={Profile}/>
           <Route path='/adminLogin' exact component={() => <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>}/>
           <Route path='/' render={() => <Container> You just wandered into an unmade page. Here's a picture of my dog.
             <img style={{width: "100%", height: "auto"}}

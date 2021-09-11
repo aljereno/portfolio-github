@@ -51,11 +51,14 @@ const MiniExp = () => {
 const MiniSkills = () => {
     const {docs} = useFirestore('skill-text');
     let emptyArr = [];
-    
+
+    const createArr = () => {
+        docs.map((doc) => emptyArr.push(doc.title))
+    }
     return (
         <div className="miniResume">
             <h3>Skills</h3>
-            {docs && docs.map((doc) => emptyArr.push(doc.title))}
+            {createArr()}
             <p>{emptyArr = emptyArr.join(', ')}</p>                
         </div>
     )

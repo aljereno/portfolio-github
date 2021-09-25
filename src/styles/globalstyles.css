@@ -215,6 +215,13 @@ h4 {
     flex-basis: 100%;
     flex-wrap: wrap;
   }
+  .entertain-grid {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
 }
 
 .completedImg {
@@ -270,5 +277,4 @@ h4 {
 
 .miniDisplay {
   display: flex;
-  
 }

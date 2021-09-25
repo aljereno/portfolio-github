@@ -39,7 +39,7 @@ const MiddleHomepage = ({loggedIn}) => {
                     </Container>
             </div>
             <Container>
-            <div style={{display: "flex", textAlign: "center"}}>
+            <div className="miniDisplay" style={{display: "flex", textAlign: "center"}}>
                 <MonthlyGoals leftOrient={true} loggedIn={loggedIn}/>
                 <MonthlyGoals leftOrient={false} loggedIn={loggedIn}/>
             </div>

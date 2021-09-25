@@ -49,7 +49,8 @@ const AboutCard = () => {
                         <p>To test my limits on what I know about React, Firebase and basic UI generation. There are more I am excited to plan
                             and actually code later. If anyone has any idea on what type of color scheme I should go with, stuff that is more
                             earthy and light on the eyes please let me know. Although I love wheat, brown, slate and beige, I'm sure there are
-                            tons of other color combo's and compliments out there.
+                            tons of other color combo's and compliments out there. I am unfortunately addicted to Genshin Impact so if you are
+                            interested in builds and optimization like I am, look at the genshin project in the ongoing section at the top. 
                         </p>
                     </div>
                 <img 

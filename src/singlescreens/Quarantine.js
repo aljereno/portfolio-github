@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Tabs, Tab } from 'react-bootstrap';
+import MiniGallery from '../minis/MiniGallery';
 
 const Quarantine = () => {
     return (
@@ -44,28 +45,7 @@ const Quarantine = () => {
             </p>
                 </Tab>
                 <Tab eventKey="gallery" title="Gallery">
-                    <div style={{display: "flex", flexWrap: "wrap"}}>
-                    <img 
-                    style={{width: '50%', height: '50%'}}
-                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2FCollectibles.JPG?alt=media&token=a74330ca-3aa7-45b4-8573-9e73c9df5893' 
-                    alt='Early prototype of dashboard'/>
-                    <p>Figure 1: Collectibles</p>
-                    <img 
-                    style={{width: '50%', height: '50%'}}
-                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fenemies.JPG?alt=media&token=825d2b3d-7233-4d4d-a9d0-51ae383f9ba0' 
-                    alt='Early prototype of dashboard'/>
-                    <p style={{textAlign : 'center'}}>Figure 2: Enemies</p>
-                    <img 
-                    style={{width: '50%', height: '50%'}}
-                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fmap1CollectibleLocations.JPG?alt=media&token=82d7795c-c624-470b-bb48-de29d6c3717e' 
-                    alt='Early prototype of dashboard'/>
-                    <p style={{textAlign : 'center'}}>Figure 3: Map 1 Collectible Locations</p>
-                    <img 
-                    style={{width: '50%', height: '50%'}}
-                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/Quarantine%2Fmap2CollectibleLocations.JPG?alt=media&token=6b73ec73-7130-42ac-a057-a1a51df4d4e9' 
-                    alt='Early prototype of dashboard'/>
-                    <p style={{textAlign : 'center'}}>Figure 4: Map 2 Collectible Locations</p>
-                    </div>
+                    <MiniGallery document={'quarantine-images-collection'}/>
                 </Tab>
             </Tabs>
         </Container>

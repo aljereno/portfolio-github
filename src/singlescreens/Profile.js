@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import useFirestore from '../hooks/useFirestore';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import TechnicalThoughts from '../static/TechnicalThoughts';
+import Leets from '../static/Leets';
 
 const Profile = () => {
+    const {docs} = useFirestore('past-notes');
     return (
         <Container style={{backgroundColor: "wheat", borderRadius: "10px", marginTop: "1rem"}}>
             <h1 style={{textAlign: 'center'}}>Aljaed Lui Crisolo Ereno</h1>
@@ -118,6 +121,17 @@ const Profile = () => {
                  is why things look a bit smoother as you go through my pages.
             </p>
             </div>
+            <div className="basicTextBox">
+                <h3>List of all my past notes</h3>
+                <p>
+                    Not ordered so have fun sifting through the <span role="img" aria-label="bullandpoopemoji">🐂💩.</span> Personally think taking notes is integral to learning, but I don't
+                    really consult my notes after I have typed or wrote it down. Although, I think the very act of typing/writing it down the first time helps stamp
+                    the ideas to my spongy smooth brain. 
+                </p>
+                {docs && docs.map((doc, index) => (
+                    <p><a href={`${doc.url}`} target="_blank" rel="noopener noreferrer">{doc.title}</a></p>
+                ))}
+            </div>
                     </motion.div>
             
                 </Tab>
@@ -127,6 +141,7 @@ const Profile = () => {
                 <Tab eventKey="leet" title="Leets">
                     <div className="basicTextBox">
                         <p>Contains the Leetcode questions I have answered</p>
+                        <Leets/>
                     </div>
                 </Tab>
             </Tabs>

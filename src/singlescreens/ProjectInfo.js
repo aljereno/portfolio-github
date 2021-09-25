@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Tabs, Tab} from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import MiniGallery from '../minis/MiniGallery';
 const ProjectInfo = () => {
     return (
         <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 2}}>
@@ -106,15 +107,14 @@ const ProjectInfo = () => {
                     </li>
                     <strong><li>September 10</li></strong>
                     <li>Contains profile page, revamped homepage, added images for Quarantine and Weatherboxs</li>
+                    <strong><li>September 25</li></strong>
+                    <li>I spent sometime scanning all my notes ever since college started so if your morbidly curious at how ugly/difficult my notes are, feel free to click on it on my profile page.</li>
+                    <li>Also made it easier for me to add in more pictures to my project info tab since I will be adding more in the future.</li>
                 </ul>
             </section>
                 </Tab>
                 <Tab eventKey="gallery" title="Gallery">
-                <img 
-                    style={{width: '100%', height: '100%'}}
-                    src='https://firebasestorage.googleapis.com/v0/b/genshin-abyss-progress.appspot.com/o/ProjectPDFs%2FearlyPrototype.JPG?alt=media&token=b9a66b9a-9601-41e4-8f4b-681f989bbcdc' 
-                    alt='Early prototype of dashboard'/>
-                    <p style={{textAlign : 'center'}}>Needed to determine how I would prototype the dashboard, settled on using a site called Figma</p>
+                    <MiniGallery document={'project-images-collection'}/>
                 </Tab>
             </Tabs>
         </Container>

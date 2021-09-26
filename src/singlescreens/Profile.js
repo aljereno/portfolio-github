@@ -129,7 +129,7 @@ const Profile = () => {
                     the ideas to my spongy smooth brain. 
                 </p>
                 {docs && docs.map((doc, index) => (
-                    <p><a href={`${doc.url}`} target="_blank" rel="noopener noreferrer">{doc.title}</a></p>
+                    <p key={index}><a href={`${doc.url}`} target="_blank" rel="noopener noreferrer">{doc.title}</a></p>
                 ))}
             </div>
                     </motion.div>

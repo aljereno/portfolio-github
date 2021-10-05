@@ -4,7 +4,7 @@ import useFirestore from '../hooks/useFirestore';
 
 const MonthlyGoals = ({leftOrient}) => {
 
-    const orient = leftOrient ? 'august-collection-stories' : 'october-collection-stories';
+    const orient = leftOrient ? 'october-collection-stories' : 'november-collection-stories';
     const { docs } = useFirestore(`${orient}`);
     
     return (

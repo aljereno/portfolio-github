@@ -13,7 +13,6 @@ const Homepage = ({loggedIn}) => {
 
     return (    
         <motion.div initial={{opacity: 0, x: -100}} animate={{opacity: 1, x: 0}} transition={{delay: 0.5, duration: 0.5}} exit={{opacity: 0.2}}>
-            
             <AboutCard/>
             <div style={{display: "flex"}}>
                 <Container style={{marginTop: "20px", marginBottom: "20px", borderRadius: "25px", flex: "0 0 80%"}}>

@@ -110,6 +110,9 @@ const ProjectInfo = () => {
                     <strong><li>September 25</li></strong>
                     <li>I spent sometime scanning all my notes ever since college started so if your morbidly curious at how ugly/difficult my notes are, feel free to click on it on my profile page.</li>
                     <li>Also made it easier for me to add in more pictures to my project info tab since I will be adding more in the future.</li>
+                    <strong><li>October 5</li></strong>
+                    <li>Upholstered the genshin impact screen the before and after pics are located in the next tab over.</li>
+                    <li>Made a family like tree to represent the character model for the genshin project</li>
                 </ul>
             </section>
                 </Tab>

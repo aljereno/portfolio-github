@@ -40,10 +40,9 @@ const AboutCard = () => {
                         What's the point of this page? I enjoy web development, I picked up on it about three years ago due to
                         taking a class on it alongside getting an internship with my school's newspaper group. I then got lucky
                         with another web development internship with XForce who paired me up with the 15th Wing Air Force working
-                        on a project called Tempest. In terms of career goals, I am actually not too sure. I'm stuck, I enjoy
-                        web development but it's been difficult landing one here in Hawai'i. I'd love to get into anything tech related
-                        whether it be Information Technology, Data Analysis, lower level machine code. I just know that web development
-                        is a skill that I'd always be doing on the side. I'm just trying to have fun and not take things too seriously.
+                        on a project called Tempest.  I'd love to get into anything tech related whether it be Information Technology, 
+                        Data Analysis, lower level machine code. I just know that web development is a skill that I'd always be doing 
+                        on the side. I'm just trying to have fun and not take things too seriously. 
                         </p>
                         <h3 style={{ paddingLeft: "0.5rem",backgroundColor: "#ffeecc", borderRadius: "15px 15px 15px 0"}}>Why this?</h3>
                         <p>To test my limits on what I know about React, Firebase and basic UI generation. There are more I am excited to plan

@@ -11,11 +11,7 @@ const GenshinModal = ({selectedImg, setSelectedImg}) => {
     return (
         <div className="backdrop" onClick={handleClick}
         >
-            <img src={selectedImg} alt="enlarged"
-                //offset for the vertical 
-                //Starts it high up then comes down
-                //bouncy effect
-            />
+            <img src={selectedImg} alt="enlarged"/>
         </div>
     )
 }

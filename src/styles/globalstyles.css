@@ -222,6 +222,9 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.5rem;
   }
+  .characterPortait {
+    margin-left: 3rem;
+  }
 }
 
 .completedImg {
@@ -277,4 +280,49 @@ h4 {
 
 .miniDisplay {
   display: flex;
+}
+
+
+/* Custom Scrollbars */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Handles nested divs for genshin screen */
+
+.firstDiv {
+  background-color: black;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 15px;
+}
+
+.secondDiv {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.secondDiv > p {
+  margin-left: 1rem;
 }
